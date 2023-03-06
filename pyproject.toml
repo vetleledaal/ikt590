@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "thesis"
+version = "0.1.0"
+description = ""
+authors = ["Vetle Ledaal <vetle.ledaal@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.8" # min=3.7 (gurantees ordered dict)
+numpy = "^1.24.1"
+pandas = "^1.5.3"
+scikit-learn = "^1.2.0"
+tensorflow = "^2.11.0"
+keras = "^2.11.0"
+matplotlib = "^3.7.0"
+nltk = "^3.8.1"
+tldextract = "^3.4.0"
+tmu = {git = "https://github.com/cair/tmu.git", rev = "main"}
+pycuda = "^2022.2.2"
+
+[tool.poetry.group.dev.dependencies]
+faker = "^17.5.0"
+ipykernel = "^6.21.2"
+pytest = "^7.2.1"
+pytest-benchmark = "^4.0.0"
+pylint = "^2.16.2"
+prospector = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
