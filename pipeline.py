@@ -1,29 +1,20 @@
 import argparse
-import glob
-import json
+import logging
 import os
-import re
-import string
 from collections import Counter
 from time import time
-from typing import Dict, List, NamedTuple, Optional
+from typing import Dict, List, NamedTuple, Optional, Tuple
 
-import keras
-import nltk
 import numpy as np
 import pandas as pd
 import regex
 import tldextract
-from keras.preprocessing.text import Tokenizer
-from nltk.corpus import stopwords
-from scipy.sparse import lil_matrix
-from sklearn import preprocessing
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from tmu.models.classification.vanilla_classifier import TMClassifier
+
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # above keras
 
 
 class TrainTestSet(NamedTuple):
@@ -32,6 +23,12 @@ class TrainTestSet(NamedTuple):
     test_X: np.ndarray
     test_Y: np.ndarray
 
+noisy_loggers = [
+    'tmu.models.classification.vanilla_classifier',
+    'tmu.clause_bank.clause_bank_cuda'
+]
+for logger in noisy_loggers:
+    logging.getLogger(logger).setLevel(logging.INFO)
 
 # Precompile regular expressions
 # Based on https://github.com/yoonkim/CNN_sentence/blob/23e0e1f7355705bb083043fda05c031b15acb38c/process_data.py#L97
@@ -47,15 +44,14 @@ def clean_str(text):
     text = RE_PUNCTUATION.sub(" \\1 ", text)
     # TODO: remove stop words here?
     text = RE_WHITESPACE.sub(" ", text)
-    return text.strip().lower()
+    return text.strip().lower().split()
 
 
-def generate_word_freq(*series: pd.Series, max_n: Optional[int] = None): # TODO: return type
+def generate_word_freq(*series: pd.Series, max_n: Optional[int] = None) -> List[Tuple[str, int]]:
     word_counts = Counter()
     for s in series:
         for row in s:
-            cleaned_text = clean_str(row)
-            tokens = cleaned_text.split()
+            tokens = clean_str(row)
             word_counts.update(tokens)
     return word_counts.most_common(max_n)
 
@@ -66,6 +62,7 @@ def generate_word_to_idx(*series: pd.Series, max_n: Optional[int] = None) -> Dic
 
 
 def bag_of_words(sentences: pd.Series, word_to_idx: Dict[str, int]):
+    sentences = sentences.apply(clean_str)
     # lil_matrix not supported, is flattened in TMU
     # Using np.uint32 as it's the same in TMU
     matrix = np.zeros((len(sentences), len(word_to_idx)), dtype=np.uint32)
@@ -93,28 +90,39 @@ def train(a: TrainTestSet, metrics: Optional[List[str]] = None):
 
     print(f'[*] Training for {args.epochs} epochs...')
     for i in range(args.epochs):
-        t1 = time()
+        time_before = time()
         tm.fit(a.train_X, a.train_Y) # TODO: seed. Uses np.random.shuffle() internally
-        t2 = time()
+        time_fit = time() - time_before
 
         if metrics is not None:
-            test_Y_pred = tm.predict(a.test_X) # TODO: training accuracy/ if the model is training well
+            time_before = time()
+            train_Y_predict = tm.predict(a.train_X)
+            time_train_predict = time() - time_before
+            
+            time_before = time()
+            test_Y_predict = tm.predict(a.test_X)
+            time_test_predict = time() - time_before
 
-            print(f'Epoch {i+1}:', end='')
+            print(f'Epoch {str(i+1).rjust(3)}: Train%/Test%', end='')
             if 'acc' in metrics:
-                acc = accuracy_score(a.test_Y, test_Y_pred)
-                print(f"\tTest Accuracy: {acc:.2%}", end='')
+                accuracy_train = accuracy_score(a.train_Y, train_Y_predict)
+                accuracy_test = accuracy_score(a.test_Y, test_Y_predict)
+                print(f" | Accuracy: {accuracy_train:.2%}/{accuracy_test:.2%}", end='')
             if 'prec' in metrics:
-                prec = precision_score(a.test_Y, test_Y_pred, average='macro')
-                print(f"\tTest Precision: {prec:.2%}", end='')
+                precision_train = precision_score(a.train_Y, train_Y_predict, average='macro')
+                precision_test = precision_score(a.test_Y, test_Y_predict, average='macro')
+                print(f" | Precision: {precision_train:.2%}/{precision_test:.2%}", end='')
             if 'rec' in metrics:
-                rec = recall_score(a.test_Y, test_Y_pred, average='macro')
-                print(f"\tTest Recall: {rec:.2%}", end='')
+                recall_train = recall_score(a.train_Y, train_Y_predict, average='macro')
+                recall_test = recall_score(a.test_Y, test_Y_predict, average='macro')
+                print(f" | Recall: {recall_train:.2%}/{recall_test:.2%}", end='')
             if 'f1' in metrics:
-                f1 = f1_score(a.test_Y, test_Y_pred, average='macro')
-                print(f"\tTest F1 score: {f1:.2%}", end='')
+                f1_train = f1_score(a.train_Y, train_Y_predict, average='macro')
+                f1_test = f1_score(a.test_Y, test_Y_predict, average='macro')
+                print(f" | F1: {f1_train:.2%}/{f1_test:.2%}", end='')
 
-        print(f'\tTime: {(t2-t1):.0f}s', end='')
+        time_total = time_fit + time_train_predict + time_test_predict
+        print(f' | Time: fit={time_fit:03.0f}s, train={time_train_predict:03.0f}s, test={time_test_predict:03.0f}s, total={time_total:03.0f}s', end='')
         print('') # explicit newline
 
 
@@ -212,7 +220,7 @@ def fix_malformed(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def main():
+def main(args):
     np.random.seed(args.seed)
 
     print("[*] Load dataset...")
@@ -235,7 +243,7 @@ def main():
     print(f'Dataset: {args.dataset}')
     print(f'TMU params: num-clauses={args.num_clauses}, T={args.T}, s={args.s}')
     print(f'Epochs: {args.epochs}')
-    print(f'Feature(s): {args.feature}')
+    print(f'Feature(s): {", ".join(args.feature)}')
     print(f'max-vocab={args.max_vocab}, max-domain={args.max_domain}, max-tweet={args.max_tweet}')
     print('='*20)
     print(f'Train size: {train_test_set.train_X.shape[0]}')
@@ -263,4 +271,4 @@ if __name__ == '__main__':
     parser.add_argument('--max-domain', default=500, type=int)
     parser.add_argument('--max-tweet', default=500, type=int)
     args = parser.parse_args()
-    main()
+    main(args)

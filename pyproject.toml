@@ -16,6 +16,8 @@ nltk = "^3.8.1"
 tldextract = "^3.4.0"
 tmu = {git = "https://github.com/cair/tmu.git", rev = "main"}
 pycuda = "^2022.2.2"
+plotly = "^5.13.1"
+nbformat = "^5.7.3"
 
 [tool.poetry.group.dev.dependencies]
 faker = "^17.5.0"
@@ -24,6 +26,7 @@ pytest = "^7.2.1"
 pytest-benchmark = "^4.0.0"
 pylint = "^2.16.2"
 prospector = "^1.9.0"
+autopep8 = "^2.0.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

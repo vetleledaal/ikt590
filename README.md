@@ -1,4 +1,6 @@
 # IKT590
+README may be outdated.
+
 ## Setup
 ```bash
 git clone https://github.com/vetleledaal/ikt590.git vetle_ikt590
