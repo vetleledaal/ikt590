@@ -43,7 +43,7 @@ def clean_str(text):
     text = RE_NOT_ALNUM.sub(" ", text)
     text = RE_CONTRACTION.sub(" '\\1", text)
     text = RE_PUNCTUATION.sub(" \\1 ", text)
-    # TODO: remove stop words here?
+    # TODO: remove stop words here
     text = RE_WHITESPACE.sub(" ", text)
     return text.strip().lower().split()
 
@@ -83,10 +83,10 @@ def train(a: TrainTestSet, metrics: Optional[List[str]] = None):
         number_of_clauses=args.num_clauses,
         T=args.T,
         s=args.s,
-        max_included_literals=32,
+        max_included_literals=32, # 8 16 32 64 None, mention in discussion
         platform=args.device,
         weighted_clauses=True,
-        clause_drop_p=0.75
+        clause_drop_p=0.75 # experiment with this. 0.25 -> 0.75. mention in discussion
     )
 
     print(f'[*] Training for {args.epochs} epochs...')
@@ -261,16 +261,16 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--num-clauses', default=5000, type=int) # must be >5000
-    parser.add_argument('--T', default=100, type=int) # try 100
-    parser.add_argument('--s', default=10.0, type=float) # try 10.0
-    parser.add_argument('--epochs', default=100, type=int)
+    parser.add_argument('--T', default=100, type=int) # step 50
+    parser.add_argument('--s', default=10.0, type=float) # 5 10 15
+    parser.add_argument('--epochs', default=100, type=int) # 100 150
     parser.add_argument('--device', default='GPU', type=str)
     parser.add_argument('--seed', default=42, type=int)
     parser.add_argument('--dataset', choices=('FakeNewsNet', 'FakeCovid', 'FakeNewsNet-gossipcop', 'FakeNewsNet-politifact'), default='FakeNewsNet')
     parser.add_argument('--feature', choices=('all', 'text', 'domain', 'tweet'), default='all', nargs='+')
     parser.add_argument('--test-size', default=0.2, type=float)
     parser.add_argument('--malformed', choices=('fix', 'drop'), default='fix')
-    parser.add_argument('--max-vocab', default=3000, type=int)
+    parser.add_argument('--max-vocab', default=3000, type=int) # 15000 (if too slow 10000)
     parser.add_argument('--max-domain', default=500, type=int)
     parser.add_argument('--max-tweet', default=500, type=int)
     args = parser.parse_args()
