@@ -34,7 +34,7 @@ def run(log_dir, dataset, feature_set):
     os.rename(temp_file.name, log_file)
 
 def main(args):
-    datasets = ('FakeNewsNet', 'FakeCovid')
+    datasets = ('FakeNewsNet-gossipcop', 'FakeNewsNet-politifact')
     features = ('text', 'domain')
 
     log_dir = "logs"

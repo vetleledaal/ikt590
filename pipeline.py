@@ -1,4 +1,5 @@
 import argparse
+import glob
 import logging
 import os
 from collections import Counter
@@ -133,16 +134,16 @@ label
 url
 tweet_ids
 '''
-
-def load_FakeNewsNet():
+def load_FakeNewsNet(subset='*'):
     dfs = []
-    for filename in os.listdir('FakeNewsNet/dataset'):
-        if filename.endswith('_real.csv') or filename.endswith('_fake.csv'):
-            label = int('_real' in filename)
-            df = pd.read_csv(os.path.join('FakeNewsNet/dataset', filename))
-            df['label'] = label
-            df = df.rename(columns={'title': 'text', 'news_url': 'url'})
-            dfs.append(df)
+    file_pattern = f'FakeNewsNet/dataset/{subset}_*.csv'
+    for filepath in glob.glob(file_pattern):
+        filename = os.path.basename(filepath)
+        label = int('_real' in filename)
+        df = pd.read_csv(filepath)
+        df['label'] = label
+        df = df.rename(columns={'title': 'text', 'news_url': 'url'})
+        dfs.append(df)
 
     return pd.concat(dfs, ignore_index=True)
 
@@ -224,10 +225,12 @@ def main(args):
     np.random.seed(args.seed)
 
     print("[*] Load dataset...")
-    if args.dataset == 'FakeNewsNet':
-        df = load_FakeNewsNet()
+    if args.dataset.startswith('FakeNewsNet'):
+        subset = args.dataset.split('-')[-1] if '-' in args.dataset else '*'
+        df = load_FakeNewsNet(subset=subset)
     elif args.dataset == 'FakeCovid':
         df = load_FakeCovid()
+
     
     print('[*] Fix malformed data...')
     df = fix_malformed(df)
@@ -263,7 +266,7 @@ if __name__ == '__main__':
     parser.add_argument('--epochs', default=100, type=int)
     parser.add_argument('--device', default='GPU', type=str)
     parser.add_argument('--seed', default=42, type=int)
-    parser.add_argument('--dataset', choices=('FakeNewsNet', 'FakeCovid'), default='FakeNewsNet')
+    parser.add_argument('--dataset', choices=('FakeNewsNet', 'FakeCovid', 'FakeNewsNet-gossipcop', 'FakeNewsNet-politifact'), default='FakeNewsNet')
     parser.add_argument('--feature', choices=('all', 'text', 'domain', 'tweet'), default='all', nargs='+')
     parser.add_argument('--test-size', default=0.2, type=float)
     parser.add_argument('--malformed', choices=('fix', 'drop'), default='fix')
