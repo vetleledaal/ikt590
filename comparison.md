@@ -2,14 +2,15 @@
 ## Summary
 |                | PolitiFact Acc | GossipCop Acc |
 | :------------- | :------------- | :------------ |
-| Paper 1 (TBA)  | 0.788          | 0.809         |
+| Paper 1 (TBA)  | 0.8632**       | 0.8388**      |
 | Paper 2 (2019) | 0.691          | 0.822         |
 | Paper 3 (2020) | 0.8            | 0.82          |
 | Paper 4 (2023) | 0.584          | -             |
 | Paper 5 (2020) | 0.846          | 0.86          |
 | Paper 6 (2021) | 0.9156*        | 0.9156*       |
 
-\* Combined dataset.
+\* Combined dataset.\
+\*\* Not updated below. (FakeNewsNet-politifact_max-vocab=15000_pre=v2_text_domain_T=200_s=15 and FakeNewsNet-gossipcop_max-vocab=15000_pre=v2_domain_T=250_s=5)
 
 
 ## Paper 1: This paper
@@ -610,7 +611,7 @@ After preprocessing:
 * Transfer learning
 * News body was crawled
 * Ensemble of models used for balancing
-* 
+*
 
 ### Size
 * PolitiFact has a total of 1056 (624 real, 432 fake)
