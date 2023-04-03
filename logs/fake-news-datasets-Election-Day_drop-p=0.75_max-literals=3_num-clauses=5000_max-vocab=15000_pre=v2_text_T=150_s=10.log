@@ -1,0 +1,175 @@
+[nltk_data] Downloading package wordnet to /home/bjorvl16/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     /home/bjorvl16/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[*] Load dataset...
+[*] Fix malformed data...
+[*] Split...
+[*] Encoding...
+[*] Encoding feature: text... 701
+==============================
+Using CPU for training
+Dataset: fake-news-datasets-Election-Day
+TMU params: num-clauses=5000, T=150, s=10.0
+Epochs: 150
+Feature(s): text
+max-vocab=15000, max-domain=500, max-tweet=500
+====================
+Train size: 1061
+Train classes: 2
+Test size: 266
+Test classes: 2
+Total features: 701
+==============================
+[*] Training for 150 epochs...
+Epoch   1: Train%/Test% | Accuracy: 89.73%/89.85% | Precision: 44.86%/44.92% | Recall: 50.00%/50.00% | F1: 47.29%/47.33% | Time: fit=002s, train=000s, test=000s, total=002s
+Epoch   2: Train%/Test% | Accuracy: 89.73%/89.85% | Precision: 44.86%/44.92% | Recall: 50.00%/50.00% | F1: 47.29%/47.33% | Time: fit=002s, train=000s, test=000s, total=002s
+Epoch   3: Train%/Test% | Accuracy: 89.73%/89.85% | Precision: 44.86%/44.92% | Recall: 50.00%/50.00% | F1: 47.29%/47.33% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch   4: Train%/Test% | Accuracy: 89.73%/89.85% | Precision: 44.86%/44.92% | Recall: 50.00%/50.00% | F1: 47.29%/47.33% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch   5: Train%/Test% | Accuracy: 89.82%/89.85% | Precision: 94.91%/44.92% | Recall: 50.46%/50.00% | F1: 48.23%/47.33% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch   6: Train%/Test% | Accuracy: 89.82%/89.85% | Precision: 94.91%/44.92% | Recall: 50.46%/50.00% | F1: 48.23%/47.33% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch   7: Train%/Test% | Accuracy: 90.29%/90.23% | Precision: 85.20%/95.09% | Recall: 53.56%/51.85% | F1: 54.15%/50.99% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch   8: Train%/Test% | Accuracy: 90.86%/90.60% | Precision: 89.20%/82.92% | Recall: 56.32%/55.35% | F1: 58.77%/57.18% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch   9: Train%/Test% | Accuracy: 90.95%/90.60% | Precision: 87.64%/78.91% | Recall: 57.18%/56.99% | F1: 60.09%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  10: Train%/Test% | Accuracy: 91.42%/90.60% | Precision: 89.51%/78.91% | Recall: 59.48%/56.99% | F1: 63.50%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  11: Train%/Test% | Accuracy: 91.61%/90.60% | Precision: 90.08%/78.91% | Recall: 60.39%/56.99% | F1: 64.80%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  12: Train%/Test% | Accuracy: 91.80%/90.60% | Precision: 90.58%/78.91% | Recall: 61.31%/56.99% | F1: 66.06%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  13: Train%/Test% | Accuracy: 91.89%/90.60% | Precision: 89.57%/78.91% | Recall: 62.18%/56.99% | F1: 67.12%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  14: Train%/Test% | Accuracy: 91.80%/90.60% | Precision: 89.31%/78.91% | Recall: 61.72%/56.99% | F1: 66.51%/59.62% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch  15: Train%/Test% | Accuracy: 92.46%/90.60% | Precision: 88.28%/78.91% | Recall: 66.15%/56.99% | F1: 71.65%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  16: Train%/Test% | Accuracy: 92.37%/90.60% | Precision: 86.67%/78.91% | Recall: 66.50%/56.99% | F1: 71.81%/59.62% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  17: Train%/Test% | Accuracy: 92.84%/90.98% | Precision: 87.29%/81.47% | Recall: 69.20%/58.84% | F1: 74.60%/62.30% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  18: Train%/Test% | Accuracy: 92.27%/89.47% | Precision: 81.26%/68.41% | Recall: 71.73%/58.00% | F1: 75.36%/60.32% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  19: Train%/Test% | Accuracy: 92.55%/88.35% | Precision: 81.11%/65.41% | Recall: 75.13%/60.66% | F1: 77.69%/62.37% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  20: Train%/Test% | Accuracy: 92.65%/89.10% | Precision: 80.91%/67.88% | Recall: 76.81%/61.08% | F1: 78.66%/63.31% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  21: Train%/Test% | Accuracy: 92.65%/87.97% | Precision: 80.66%/65.17% | Recall: 77.62%/62.10% | F1: 79.03%/63.36% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  22: Train%/Test% | Accuracy: 92.18%/88.35% | Precision: 78.88%/67.32% | Recall: 78.17%/65.59% | F1: 78.52%/66.39% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  23: Train%/Test% | Accuracy: 92.08%/87.97% | Precision: 78.25%/66.47% | Recall: 80.97%/65.38% | F1: 79.52%/65.90% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  24: Train%/Test% | Accuracy: 92.46%/87.59% | Precision: 79.71%/63.43% | Recall: 78.74%/60.24% | F1: 79.21%/61.49% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  25: Train%/Test% | Accuracy: 92.46%/87.59% | Precision: 79.63%/65.03% | Recall: 79.14%/63.53% | F1: 79.38%/64.22% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  26: Train%/Test% | Accuracy: 92.27%/87.59% | Precision: 78.98%/65.03% | Recall: 79.45%/63.53% | F1: 79.21%/64.22% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  27: Train%/Test% | Accuracy: 90.76%/86.09% | Precision: 75.18%/63.06% | Recall: 81.85%/64.33% | F1: 77.94%/63.65% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  28: Train%/Test% | Accuracy: 89.44%/84.96% | Precision: 72.98%/62.94% | Recall: 82.74%/66.99% | F1: 76.53%/64.48% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  29: Train%/Test% | Accuracy: 88.88%/83.46% | Precision: 72.11%/61.30% | Recall: 82.43%/66.16% | F1: 75.73%/62.91% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  30: Train%/Test% | Accuracy: 89.26%/83.46% | Precision: 72.81%/60.58% | Recall: 83.45%/64.51% | F1: 76.55%/61.95% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  31: Train%/Test% | Accuracy: 89.73%/86.09% | Precision: 73.34%/63.77% | Recall: 82.09%/65.98% | F1: 76.65%/64.73% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  32: Train%/Test% | Accuracy: 90.95%/86.09% | Precision: 75.67%/63.77% | Recall: 83.99%/65.98% | F1: 78.96%/64.73% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  33: Train%/Test% | Accuracy: 91.05%/86.47% | Precision: 75.83%/64.34% | Recall: 83.64%/66.19% | F1: 78.97%/65.17% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  34: Train%/Test% | Accuracy: 90.48%/85.34% | Precision: 74.90%/63.41% | Recall: 84.95%/67.20% | F1: 78.64%/64.89% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  35: Train%/Test% | Accuracy: 90.57%/85.71% | Precision: 74.96%/63.23% | Recall: 83.78%/65.77% | F1: 78.37%/64.31% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  36: Train%/Test% | Accuracy: 92.18%/87.22% | Precision: 78.46%/63.48% | Recall: 81.42%/61.68% | F1: 79.84%/62.47% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  37: Train%/Test% | Accuracy: 92.08%/86.84% | Precision: 78.25%/62.74% | Recall: 80.97%/61.47% | F1: 79.52%/62.05% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch  38: Train%/Test% | Accuracy: 91.61%/86.09% | Precision: 77.02%/62.29% | Recall: 81.52%/62.69% | F1: 79.02%/62.49% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  39: Train%/Test% | Accuracy: 91.05%/84.21% | Precision: 75.85%/61.37% | Recall: 84.04%/64.93% | F1: 79.11%/62.70% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  40: Train%/Test% | Accuracy: 90.01%/82.33% | Precision: 74.01%/60.26% | Recall: 83.87%/65.53% | F1: 77.65%/61.80% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  41: Train%/Test% | Accuracy: 90.67%/83.83% | Precision: 75.10%/60.96% | Recall: 83.43%/64.72% | F1: 78.37%/62.32% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  42: Train%/Test% | Accuracy: 90.67%/83.46% | Precision: 75.13%/60.58% | Recall: 83.83%/64.51% | F1: 78.52%/61.95% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  43: Train%/Test% | Accuracy: 91.23%/82.71% | Precision: 76.24%/60.59% | Recall: 84.55%/65.74% | F1: 79.55%/62.16% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  44: Train%/Test% | Accuracy: 90.95%/83.08% | Precision: 75.72%/60.21% | Recall: 84.80%/64.30% | F1: 79.23%/61.58% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  45: Train%/Test% | Accuracy: 91.61%/83.46% | Precision: 77.02%/59.80% | Recall: 85.58%/62.87% | F1: 80.43%/60.92% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  46: Train%/Test% | Accuracy: 91.05%/83.83% | Precision: 75.89%/61.68% | Recall: 84.86%/66.36% | F1: 79.38%/63.29% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  47: Train%/Test% | Accuracy: 91.23%/83.83% | Precision: 76.26%/60.96% | Recall: 84.96%/64.72% | F1: 79.69%/62.32% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  48: Train%/Test% | Accuracy: 91.33%/84.21% | Precision: 76.44%/61.37% | Recall: 85.01%/64.93% | F1: 79.84%/62.70% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  49: Train%/Test% | Accuracy: 91.71%/85.34% | Precision: 77.20%/61.99% | Recall: 84.82%/63.92% | F1: 80.32%/62.83% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  50: Train%/Test% | Accuracy: 91.52%/86.09% | Precision: 76.79%/63.77% | Recall: 83.49%/65.98% | F1: 79.60%/64.73% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  51: Train%/Test% | Accuracy: 91.61%/86.47% | Precision: 77.00%/63.65% | Recall: 84.36%/64.54% | F1: 80.03%/64.08% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  52: Train%/Test% | Accuracy: 91.52%/85.71% | Precision: 76.81%/63.90% | Recall: 84.71%/67.41% | F1: 80.01%/65.31% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  53: Train%/Test% | Accuracy: 90.57%/84.96% | Precision: 75.03%/62.94% | Recall: 84.59%/66.99% | F1: 78.65%/64.48% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  54: Train%/Test% | Accuracy: 89.16%/83.08% | Precision: 72.98%/60.21% | Recall: 85.43%/64.30% | F1: 77.10%/61.58% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  55: Train%/Test% | Accuracy: 88.88%/81.58% | Precision: 72.72%/58.90% | Recall: 86.08%/63.47% | F1: 76.97%/60.18% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  56: Train%/Test% | Accuracy: 88.97%/82.71% | Precision: 72.72%/61.28% | Recall: 85.32%/67.38% | F1: 76.84%/63.06% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  57: Train%/Test% | Accuracy: 89.82%/84.21% | Precision: 73.70%/60.61% | Recall: 83.77%/63.29% | F1: 77.37%/61.66% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  58: Train%/Test% | Accuracy: 89.82%/84.59% | Precision: 73.75%/61.80% | Recall: 84.17%/65.14% | F1: 77.51%/63.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  59: Train%/Test% | Accuracy: 89.16%/83.46% | Precision: 72.67%/59.80% | Recall: 83.40%/62.87% | F1: 76.41%/60.92% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  60: Train%/Test% | Accuracy: 87.56%/80.45% | Precision: 70.98%/58.79% | Recall: 84.94%/64.48% | F1: 75.07%/60.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  61: Train%/Test% | Accuracy: 88.60%/79.70% | Precision: 72.27%/58.28% | Recall: 85.52%/64.06% | F1: 76.45%/59.44% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  62: Train%/Test% | Accuracy: 88.69%/80.45% | Precision: 72.47%/58.79% | Recall: 85.98%/64.48% | F1: 76.71%/60.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  63: Train%/Test% | Accuracy: 88.69%/80.83% | Precision: 72.54%/59.06% | Recall: 86.39%/64.69% | F1: 76.84%/60.42% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  64: Train%/Test% | Accuracy: 88.22%/80.08% | Precision: 72.16%/58.53% | Recall: 87.34%/64.27% | F1: 76.58%/59.76% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  65: Train%/Test% | Accuracy: 88.60%/80.08% | Precision: 72.49%/58.53% | Recall: 86.74%/64.27% | F1: 76.83%/59.76% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch  66: Train%/Test% | Accuracy: 88.60%/80.83% | Precision: 72.49%/60.42% | Recall: 86.74%/67.98% | F1: 76.83%/62.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  67: Train%/Test% | Accuracy: 88.69%/80.83% | Precision: 72.61%/59.06% | Recall: 86.79%/64.69% | F1: 76.96%/60.42% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  68: Train%/Test% | Accuracy: 88.78%/79.70% | Precision: 72.80%/58.28% | Recall: 87.25%/64.06% | F1: 77.22%/59.44% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  69: Train%/Test% | Accuracy: 87.37%/78.95% | Precision: 71.18%/58.50% | Recall: 86.87%/65.29% | F1: 75.47%/59.63% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  70: Train%/Test% | Accuracy: 87.09%/78.20% | Precision: 70.87%/58.05% | Recall: 86.71%/64.87% | F1: 75.11%/59.00% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  71: Train%/Test% | Accuracy: 89.07%/79.32% | Precision: 72.98%/58.03% | Recall: 86.19%/63.85% | F1: 77.23%/59.12% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  72: Train%/Test% | Accuracy: 87.75%/78.95% | Precision: 71.36%/57.80% | Recall: 85.86%/63.64% | F1: 75.58%/58.81% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  73: Train%/Test% | Accuracy: 88.22%/78.95% | Precision: 71.86%/57.80% | Recall: 85.72%/63.64% | F1: 76.07%/58.81% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  74: Train%/Test% | Accuracy: 88.12%/79.32% | Precision: 71.74%/58.03% | Recall: 85.66%/63.85% | F1: 75.94%/59.12% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  75: Train%/Test% | Accuracy: 87.84%/77.44% | Precision: 71.40%/56.94% | Recall: 85.51%/62.81% | F1: 75.57%/57.59% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  76: Train%/Test% | Accuracy: 87.37%/78.57% | Precision: 71.10%/58.94% | Recall: 86.46%/66.72% | F1: 75.34%/60.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  77: Train%/Test% | Accuracy: 88.60%/79.32% | Precision: 72.63%/59.40% | Recall: 87.55%/67.14% | F1: 77.08%/60.74% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  78: Train%/Test% | Accuracy: 88.31%/80.08% | Precision: 72.20%/59.90% | Recall: 86.99%/67.56% | F1: 76.58%/61.41% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  79: Train%/Test% | Accuracy: 87.09%/78.57% | Precision: 70.78%/58.94% | Recall: 86.31%/66.72% | F1: 74.98%/60.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  80: Train%/Test% | Accuracy: 87.18%/78.20% | Precision: 71.06%/58.05% | Recall: 87.17%/64.87% | F1: 75.35%/59.00% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  81: Train%/Test% | Accuracy: 86.71%/78.57% | Precision: 70.38%/58.94% | Recall: 86.10%/66.72% | F1: 74.51%/60.09% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  82: Train%/Test% | Accuracy: 87.18%/78.20% | Precision: 70.89%/59.37% | Recall: 86.36%/68.15% | F1: 75.10%/60.51% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  83: Train%/Test% | Accuracy: 86.80%/77.44% | Precision: 70.57%/58.30% | Recall: 86.55%/66.09% | F1: 74.76%/59.15% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  84: Train%/Test% | Accuracy: 90.76%/83.08% | Precision: 75.40%/60.21% | Recall: 85.10%/64.30% | F1: 79.07%/61.58% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  85: Train%/Test% | Accuracy: 90.39%/83.46% | Precision: 74.82%/61.30% | Recall: 85.71%/66.16% | F1: 78.76%/62.91% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  86: Train%/Test% | Accuracy: 90.67%/83.46% | Precision: 75.33%/61.30% | Recall: 86.27%/66.16% | F1: 79.32%/62.91% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  87: Train%/Test% | Accuracy: 90.20%/83.46% | Precision: 74.55%/61.30% | Recall: 86.01%/66.16% | F1: 78.61%/62.91% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  88: Train%/Test% | Accuracy: 90.10%/83.83% | Precision: 74.35%/61.68% | Recall: 85.55%/66.36% | F1: 78.33%/63.29% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  89: Train%/Test% | Accuracy: 90.39%/84.21% | Precision: 74.90%/62.74% | Recall: 86.52%/68.22% | F1: 79.02%/64.59% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  90: Train%/Test% | Accuracy: 90.48%/83.83% | Precision: 74.98%/61.68% | Recall: 85.76%/66.36% | F1: 78.90%/63.29% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch  91: Train%/Test% | Accuracy: 90.20%/84.21% | Precision: 74.51%/62.74% | Recall: 85.60%/68.22% | F1: 78.48%/64.59% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  92: Train%/Test% | Accuracy: 90.48%/83.46% | Precision: 74.90%/61.30% | Recall: 84.95%/66.16% | F1: 78.64%/62.91% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  93: Train%/Test% | Accuracy: 90.57%/83.83% | Precision: 75.17%/62.98% | Recall: 86.22%/69.65% | F1: 79.18%/65.05% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  94: Train%/Test% | Accuracy: 90.20%/83.08% | Precision: 74.46%/61.62% | Recall: 85.20%/67.59% | F1: 78.34%/63.43% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  95: Train%/Test% | Accuracy: 90.76%/83.83% | Precision: 75.37%/62.98% | Recall: 84.70%/69.65% | F1: 78.94%/65.05% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  96: Train%/Test% | Accuracy: 90.67%/84.59% | Precision: 75.20%/63.15% | Recall: 84.65%/68.43% | F1: 78.79%/64.99% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  97: Train%/Test% | Accuracy: 90.76%/84.96% | Precision: 75.34%/63.58% | Recall: 84.29%/68.63% | F1: 78.80%/65.41% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  98: Train%/Test% | Accuracy: 90.67%/84.96% | Precision: 75.20%/64.18% | Recall: 84.65%/70.28% | F1: 78.79%/66.28% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch  99: Train%/Test% | Accuracy: 90.95%/86.09% | Precision: 75.69%/63.77% | Recall: 84.40%/65.98% | F1: 79.10%/64.73% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 100: Train%/Test% | Accuracy: 91.80%/86.47% | Precision: 77.40%/64.96% | Recall: 84.87%/67.83% | F1: 80.48%/66.19% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 101: Train%/Test% | Accuracy: 89.07%/81.95% | Precision: 73.17%/61.92% | Recall: 87.41%/70.25% | F1: 77.61%/63.94% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 102: Train%/Test% | Accuracy: 89.16%/80.45% | Precision: 73.30%/60.79% | Recall: 87.46%/69.41% | F1: 77.74%/62.51% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 103: Train%/Test% | Accuracy: 89.63%/82.71% | Precision: 73.95%/62.54% | Recall: 87.72%/70.66% | F1: 78.41%/64.69% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 104: Train%/Test% | Accuracy: 92.18%/87.22% | Precision: 78.36%/64.96% | Recall: 82.64%/64.96% | F1: 80.29%/64.96% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 105: Train%/Test% | Accuracy: 92.27%/87.59% | Precision: 78.57%/66.28% | Recall: 83.10%/66.81% | F1: 80.60%/66.54% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 106: Train%/Test% | Accuracy: 91.99%/87.22% | Precision: 77.90%/65.59% | Recall: 82.54%/66.60% | F1: 79.96%/66.07% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 107: Train%/Test% | Accuracy: 91.05%/86.09% | Precision: 75.99%/65.01% | Recall: 86.48%/69.26% | F1: 79.91%/66.69% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 108: Train%/Test% | Accuracy: 91.52%/86.47% | Precision: 76.88%/65.54% | Recall: 87.15%/69.47% | F1: 80.78%/67.14% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 109: Train%/Test% | Accuracy: 91.33%/85.71% | Precision: 76.51%/64.51% | Recall: 86.64%/69.05% | F1: 80.35%/66.25% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 110: Train%/Test% | Accuracy: 91.14%/86.09% | Precision: 76.16%/65.01% | Recall: 86.53%/69.26% | F1: 80.05%/66.69% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 111: Train%/Test% | Accuracy: 91.05%/86.09% | Precision: 76.02%/65.01% | Recall: 86.89%/69.26% | F1: 80.03%/66.69% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 112: Train%/Test% | Accuracy: 90.86%/86.09% | Precision: 75.69%/65.01% | Recall: 86.78%/69.26% | F1: 79.74%/66.69% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 113: Train%/Test% | Accuracy: 87.65%/80.08% | Precision: 71.66%/60.54% | Recall: 87.84%/69.20% | F1: 76.08%/62.17% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 114: Train%/Test% | Accuracy: 88.78%/81.20% | Precision: 72.87%/61.33% | Recall: 87.66%/69.83% | F1: 77.34%/63.22% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch 115: Train%/Test% | Accuracy: 88.31%/81.20% | Precision: 72.35%/61.33% | Recall: 87.80%/69.83% | F1: 76.83%/63.22% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 116: Train%/Test% | Accuracy: 88.50%/79.70% | Precision: 72.66%/60.29% | Recall: 88.31%/68.99% | F1: 77.20%/61.83% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 117: Train%/Test% | Accuracy: 86.90%/78.57% | Precision: 70.93%/59.59% | Recall: 87.83%/68.36% | F1: 75.24%/60.84% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 118: Train%/Test% | Accuracy: 86.43%/77.82% | Precision: 70.37%/59.16% | Recall: 87.16%/67.95% | F1: 74.54%/60.19% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 119: Train%/Test% | Accuracy: 86.90%/78.95% | Precision: 70.76%/59.81% | Recall: 87.01%/68.57% | F1: 75.00%/61.16% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 120: Train%/Test% | Accuracy: 87.56%/78.57% | Precision: 71.56%/59.59% | Recall: 87.79%/68.36% | F1: 75.96%/60.84% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 121: Train%/Test% | Accuracy: 87.75%/78.20% | Precision: 71.85%/58.72% | Recall: 88.30%/66.51% | F1: 76.32%/59.78% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 122: Train%/Test% | Accuracy: 88.22%/80.08% | Precision: 72.16%/59.90% | Recall: 87.34%/67.56% | F1: 76.58%/61.41% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 123: Train%/Test% | Accuracy: 88.03%/78.95% | Precision: 71.94%/59.17% | Recall: 87.24%/66.93% | F1: 76.33%/60.42% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 124: Train%/Test% | Accuracy: 88.12%/79.70% | Precision: 72.05%/60.29% | Recall: 87.29%/68.99% | F1: 76.45%/61.83% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 125: Train%/Test% | Accuracy: 91.14%/84.59% | Precision: 76.19%/63.15% | Recall: 86.94%/68.43% | F1: 80.18%/64.99% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 126: Train%/Test% | Accuracy: 90.76%/83.83% | Precision: 75.60%/62.35% | Recall: 87.54%/68.01% | F1: 79.84%/64.20% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 127: Train%/Test% | Accuracy: 90.76%/83.08% | Precision: 75.56%/61.62% | Recall: 87.14%/67.59% | F1: 79.72%/63.43% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 128: Train%/Test% | Accuracy: 90.67%/83.08% | Precision: 75.40%/61.62% | Recall: 87.08%/67.59% | F1: 79.57%/63.43% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 129: Train%/Test% | Accuracy: 90.76%/82.33% | Precision: 75.53%/60.95% | Recall: 86.73%/67.17% | F1: 79.59%/62.69% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 130: Train%/Test% | Accuracy: 90.95%/83.46% | Precision: 75.77%/61.98% | Recall: 85.62%/67.80% | F1: 79.50%/63.81% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 131: Train%/Test% | Accuracy: 91.05%/83.46% | Precision: 75.99%/61.98% | Recall: 86.48%/67.80% | F1: 79.91%/63.81% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 132: Train%/Test% | Accuracy: 88.12%/80.45% | Precision: 71.97%/60.79% | Recall: 86.88%/69.41% | F1: 76.33%/62.51% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 133: Train%/Test% | Accuracy: 88.69%/78.95% | Precision: 72.89%/59.81% | Recall: 88.42%/68.57% | F1: 77.45%/61.16% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 134: Train%/Test% | Accuracy: 87.09%/78.95% | Precision: 70.96%/59.81% | Recall: 87.12%/68.57% | F1: 75.24%/61.16% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 135: Train%/Test% | Accuracy: 88.03%/78.57% | Precision: 72.17%/59.59% | Recall: 88.46%/68.36% | F1: 76.69%/60.84% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 136: Train%/Test% | Accuracy: 88.03%/78.95% | Precision: 72.17%/59.81% | Recall: 88.46%/68.57% | F1: 76.69%/61.16% | Time: fit=001s, train=000s, test=000s, total=002s
+Epoch 137: Train%/Test% | Accuracy: 88.12%/78.57% | Precision: 72.13%/59.59% | Recall: 87.70%/68.36% | F1: 76.57%/60.84% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 138: Train%/Test% | Accuracy: 88.31%/77.82% | Precision: 72.43%/59.16% | Recall: 88.21%/67.95% | F1: 76.95%/60.19% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 139: Train%/Test% | Accuracy: 88.22%/78.20% | Precision: 72.24%/59.37% | Recall: 87.75%/68.15% | F1: 76.70%/60.51% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 140: Train%/Test% | Accuracy: 87.84%/78.95% | Precision: 71.72%/59.81% | Recall: 87.13%/68.57% | F1: 76.08%/61.16% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 141: Train%/Test% | Accuracy: 88.50%/79.70% | Precision: 72.44%/60.29% | Recall: 87.09%/68.99% | F1: 76.83%/61.83% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 142: Train%/Test% | Accuracy: 88.50%/79.70% | Precision: 72.37%/60.29% | Recall: 86.69%/68.99% | F1: 76.71%/61.83% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 143: Train%/Test% | Accuracy: 87.56%/77.82% | Precision: 71.47%/59.16% | Recall: 87.38%/67.95% | F1: 75.84%/60.19% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 144: Train%/Test% | Accuracy: 87.18%/77.82% | Precision: 70.97%/59.16% | Recall: 86.76%/67.95% | F1: 75.23%/60.19% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 145: Train%/Test% | Accuracy: 87.37%/78.57% | Precision: 71.18%/59.59% | Recall: 86.87%/68.36% | F1: 75.47%/60.84% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 146: Train%/Test% | Accuracy: 86.99%/78.57% | Precision: 70.77%/59.59% | Recall: 86.66%/68.36% | F1: 74.99%/60.84% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 147: Train%/Test% | Accuracy: 88.69%/79.32% | Precision: 72.82%/60.05% | Recall: 88.01%/68.78% | F1: 77.33%/61.49% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 148: Train%/Test% | Accuracy: 87.75%/76.69% | Precision: 71.77%/58.55% | Recall: 87.89%/67.32% | F1: 76.20%/59.26% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 149: Train%/Test% | Accuracy: 89.07%/78.95% | Precision: 73.24%/59.81% | Recall: 87.81%/68.57% | F1: 77.73%/61.16% | Time: fit=001s, train=000s, test=000s, total=001s
+Epoch 150: Train%/Test% | Accuracy: 89.26%/79.32% | Precision: 73.36%/60.05% | Recall: 87.11%/68.78% | F1: 77.75%/61.49% | Time: fit=001s, train=000s, test=000s, total=001s

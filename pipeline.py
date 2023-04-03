@@ -1,3 +1,4 @@
+import pickle
 import json
 import argparse
 import glob
@@ -24,6 +25,7 @@ nltk.download('stopwords')
 
 #os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # above keras
 
+fname = None
 
 class TrainTestSet(NamedTuple):
     train_x: np.ndarray
@@ -117,14 +119,22 @@ def train(a: TrainTestSet, metrics: Optional[List[str]] = None):
     assert a.train_x.shape[0] == a.train_y.shape[0]
     assert a.test_x.shape[0] == a.test_y.shape[0]
 
+    fname_weights = f'{fname}.weights.pkl'
+    if os.path.isfile(f'checkpoints/{fname_weights}'):
+        with open(f'checkpoints/{fname_weights}', 'rb') as f:
+            _, stored_epoch = pickle.load(f)
+            if stored_epoch >= args.epochs:
+                print(f'[*] The existing checkpoint reached the target epoch ({stored_epoch} >= {args.epochs}), delete this file manually to overwrite. Exiting.')
+                sys.exit(1)
+
     tm = TMClassifier(
         number_of_clauses=args.num_clauses,
         T=args.T,
         s=args.s,
-        max_included_literals=32, # 8 16 32 64 None, mention in discussion
+        max_included_literals=args.max_literals, # 8 16 32 64 None, mention in discussion
         platform=args.device,
         weighted_clauses=True,
-        clause_drop_p=0.75 # experiment with this. 0.25 -> 0.75. mention in discussion
+        clause_drop_p=args.drop_p # experiment with this. 0.25 -> 0.75. mention in discussion
     )
 
     print(f'[*] Training for {args.epochs} epochs...')
@@ -162,6 +172,11 @@ def train(a: TrainTestSet, metrics: Optional[List[str]] = None):
 
         time_total = time_fit + time_train_predict + time_test_predict
         print(f' | Time: fit={time_fit:03.0f}s, train={time_train_predict:03.0f}s, test={time_test_predict:03.0f}s, total={time_total:03.0f}s')
+
+        with open(f'checkpoints/{fname_weights}', 'wb') as f:
+            pickle.dump((fname_weights, i+1), f)
+
+
 
 
 '''
@@ -263,29 +278,29 @@ def load_fake_news_datasets_deception_Celebrity():
 
     return pd.DataFrame(all_posts, columns=['text', 'label'])
 
-def load_fake_news_datasets_deception_Election_Day():
+def load_fake_news_datasets_Election_Day():
     df = pd.read_excel('fake-news-datasets/datasets/electionday_tweets/data/electionday_tweets.xlsx')
     df = df.rename(columns={'is_fake_news': 'label'})
     return df
 
-def load_fake_news_datasets_deception_FakeNewsChallenge():
+def load_fake_news_datasets_FakeNewsChallenge():
     df = pd.read_csv('fake-news-datasets/datasets/fake_news_challenge/data/train_stances.csv')
     df = df.rename(columns={'Headline': 'text', 'Stance': 'label'})
     return df
 
-def load_fake_news_datasets_deception_FakeNewsChallenge_body():
+def load_fake_news_datasets_FakeNewsChallenge_body():
     df_bodies = pd.read_csv('fake-news-datasets/datasets/fake_news_challenge/data/train_bodies.csv')
     df_stances = pd.read_csv('fake-news-datasets/datasets/fake_news_challenge/data/train_stances.csv')
     df = pd.merge(df_stances, df_bodies, on='Body ID')
     df = df.rename(columns={'articleBody': 'text', 'Stance': 'label'})
     return df
 
-def load_fake_news_datasets_deception_FakeNewsCorpus():
+def load_fake_news_datasets_FakeNewsCorpus():
     df = pd.read_csv('fake-news-datasets/datasets/fake_news_corpus/data/data.csv')
     df = df.rename(columns={'headline': 'text', 'type': 'label'})
     return df
 
-def load_fake_news_datasets_deception_FakeNewsCorpus_body():
+def load_fake_news_datasets_FakeNewsCorpus_body():
     df = pd.read_csv('fake-news-datasets/datasets/fake_news_corpus/data/data.csv')
     df = df.rename(columns={'content': 'text', 'type': 'label'})
     return df
@@ -326,7 +341,15 @@ def encode_df(train_df: pd.DataFrame, test_df: pd.DataFrame,
         if all(column in df.columns for df in (train_df, test_df)):
             print(f'[*] Encoding feature: {name}...', end='')
 
-            token_index_map = create_token_index_map(train_df[column], clean_func=encoder, max_n=max_n)
+            fname_token_map = f'{fname}.tokens.pkl'
+            if os.path.isfile(fname_token_map):
+                with open(f'checkpoints/{fname_token_map}', 'rb') as f:
+                        token_index_map = pickle.load(f)
+            else:
+                token_index_map = create_token_index_map(train_df[column], clean_func=encoder, max_n=max_n)
+                with open(f'checkpoints/{fname_token_map}', 'wb') as f:
+                    pickle.dump(token_index_map, f)
+
             train_x = binary_bag_of_words(train_df[column], token_index_map, encoder)
             test_x = binary_bag_of_words(test_df[column], token_index_map, encoder)
             print(f' {len(token_index_map)}')
@@ -372,15 +395,19 @@ dataset_map = {
     'fake-news-datasets': load_fake_news_datasets,
     'fake-news-datasets-deception-FakeNewsAMT': load_fake_news_datasets_deception_FakeNewsAMT,
     'fake-news-datasets-deception-Celebrity': load_fake_news_datasets_deception_Celebrity,
-    'fake-news-datasets-deception-Election-Day': load_fake_news_datasets_deception_Election_Day,
-    'fake-news-datasets-deception-FakeNewsChallenge': load_fake_news_datasets_deception_FakeNewsChallenge,
-    'fake-news-datasets-deception-FakeNewsChallenge-body': load_fake_news_datasets_deception_FakeNewsChallenge_body,
-    'fake-news-datasets-deception-FakeNewsCorpus': load_fake_news_datasets_deception_FakeNewsCorpus,
-    'fake-news-datasets-deception-FakeNewsCorpus-body': load_fake_news_datasets_deception_FakeNewsCorpus_body,
+    'fake-news-datasets-Election-Day': load_fake_news_datasets_Election_Day,
+    'fake-news-datasets-FakeNewsChallenge': load_fake_news_datasets_FakeNewsChallenge,
+    'fake-news-datasets-FakeNewsChallenge-body': load_fake_news_datasets_FakeNewsChallenge_body,
+    'fake-news-datasets-FakeNewsCorpus': load_fake_news_datasets_FakeNewsCorpus,
+    'fake-news-datasets-FakeNewsCorpus-body': load_fake_news_datasets_FakeNewsCorpus_body,
     'hate-speech-dataset': load_hate_speech_dataset,
 }
 
 def main(args):
+    global fname
+    fname = f"{args.dataset}_drop-p={args.drop_p}_max-literals={args.max_literals}_num-clauses={args.num_clauses}_max-vocab={args.max_vocab}_pre={args.preprocessor}_{'_'.join(args.feature)}_T={args.T}_s={args.s}"
+    os.makedirs('checkpoints', exist_ok=True)
+
     np.random.seed(args.seed)
 
     print('[*] Load dataset...')
@@ -430,9 +457,9 @@ if __name__ == '__main__':
     parser.add_argument('-t',  '--T', default=100, type=int) # step 50
     parser.add_argument('-s',  '--s', default=10.0, type=float) # 5 10 15
     parser.add_argument('-e',  '--epochs', default=100, type=int) # 100 150
-    parser.add_argument('-d',  '--device', default='GPU', type=str)
+    parser.add_argument('-d',  '--device', default='CPU', type=str)
     parser.add_argument('-sd', '--seed', default=42, type=int)
-    parser.add_argument('-ds', '--dataset', choices=dataset_map.keys(), default='HateXPlain')
+    parser.add_argument('-ds', '--dataset', choices=dataset_map.keys(), default='fake-news-datasets-deception-Celebrity')
     parser.add_argument('-f',  '--feature', choices=('all', 'text', 'domain', 'tweet'), default=('all',), nargs='+')
     parser.add_argument('-ts', '--test-size', default=0.2, type=float)
     parser.add_argument('-m',  '--malformed', choices=('fix', 'drop'), default='fix')
@@ -440,6 +467,8 @@ if __name__ == '__main__':
     parser.add_argument('-md', '--max-domain', default=500, type=int)
     parser.add_argument('-mt', '--max-tweet', default=500, type=int)
     parser.add_argument('-p',  '--preprocessor', choices=('v1', 'v2'), default='v1')
+    parser.add_argument('-dp',  '--drop-p', default=0.75, type=float)
+    parser.add_argument('-ml',  '--max-literals', default=32, type=int)
     parser.add_argument('-dr', '--dry', action='store_true')
     args = parser.parse_args()
     main(args)
