@@ -1,4 +1,64 @@
 # Plots
+## FakeCovid_domain.svg
+![FakeCovid_domain.svg](imgs/FakeCovid_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 33.06 | 35.39 | 07.05 | 51.44 | 55.60 | 03.59 |
+| Test Accuracy | 35.43 | 33.04 | -6.75 | 48.43 | 36.69 | 03.19 |
+| Train Precision | 19.93 | 20.03 | 00.50 | 27.64 | 38.69 | 01.78 |
+| Test Precision | 17.75 | 17.75 | 00.00 | 28.08 | 58.20 | 02.32 |
+| Train Recall | 19.30 | 41.32 | 114.09 | 51.11 | 164.82 | 05.84 |
+| Test Recall | 17.70 | 32.31 | 82.54 | 42.53 | 140.28 | 04.93 |
+| Train F1 | 17.14 | 20.15 | 17.56 | 29.09 | 69.72 | 02.40 |
+| Test F1 | 15.22 | 17.50 | 14.98 | 25.40 | 66.89 | 02.10 |
+## FakeCovid_text.svg
+![FakeCovid_text.svg](imgs/FakeCovid_text.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 20.16 | 45.89 | 127.63 | 51.01 | 153.03 | 04.79 |
+| Test Accuracy | 18.81 | 42.95 | 128.34 | 50.14 | 166.56 | 04.61 |
+| Train Precision | 35.80 | 25.09 | -29.92 | 45.95 | 28.35 | 06.78 |
+| Test Precision | 10.02 | 21.14 | 110.98 | 37.62 | 275.45 | 05.47 |
+| Train Recall | 14.06 | 38.34 | 172.69 | 47.92 | 240.83 | 09.32 |
+| Test Recall | 11.12 | 29.94 | 169.24 | 36.60 | 229.14 | 06.29 |
+| Train F1 | 08.88 | 27.48 | 209.46 | 31.07 | 249.89 | 04.96 |
+| Test F1 | 06.16 | 22.24 | 261.04 | 26.03 | 322.56 | 03.92 |
+## FakeCovid_text_domain.svg
+![FakeCovid_text_domain.svg](imgs/FakeCovid_text_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 42.04 | 40.71 | -3.16 | 53.73 | 27.81 | 03.86 |
+| Test Accuracy | 42.00 | 38.44 | -8.48 | 50.96 | 21.33 | 04.00 |
+| Train Precision | 41.87 | 31.00 | -25.96 | 47.48 | 13.40 | 04.90 |
+| Test Precision | 10.22 | 28.68 | 180.63 | 30.94 | 202.74 | 03.52 |
+| Train Recall | 11.28 | 48.71 | 331.83 | 51.45 | 356.12 | 09.65 |
+| Test Recall | 10.41 | 34.12 | 227.76 | 41.79 | 301.44 | 07.01 |
+| Train F1 | 09.33 | 30.11 | 222.72 | 31.60 | 238.69 | 04.12 |
+| Test F1 | 07.52 | 22.00 | 192.55 | 25.36 | 237.23 | 03.45 |
+## FakeNewsNet-gossipcop_domain.svg
+![FakeNewsNet-gossipcop_domain.svg](imgs/FakeNewsNet-gossipcop_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 64.91 | 74.98 | 15.51 | 74.98 | 15.51 | 01.54 |
+| Test Accuracy | 63.84 | 73.24 | 14.72 | 73.24 | 14.72 | 01.43 |
+| Train Precision | 61.97 | 68.09 | 09.88 | 68.09 | 09.88 | 01.07 |
+| Test Precision | 61.62 | 66.55 | 08.00 | 66.69 | 08.23 | 00.86 |
+| Train Recall | 66.16 | 71.71 | 08.39 | 71.81 | 08.54 | 01.05 |
+| Test Recall | 65.76 | 70.22 | 06.78 | 70.89 | 07.80 | 00.83 |
+| Train F1 | 60.92 | 69.13 | 13.48 | 69.13 | 13.48 | 01.34 |
+| Test F1 | 60.17 | 67.44 | 12.08 | 67.56 | 12.28 | 01.17 |
+## FakeNewsNet-gossipcop_domain_tweet.svg
+![FakeNewsNet-gossipcop_domain_tweet.svg](imgs/FakeNewsNet-gossipcop_domain_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 62.66 | 75.09 | 19.84 | 76.86 | 22.66 | 01.70 |
+| Test Accuracy | 61.99 | 73.24 | 18.15 | 74.91 | 20.84 | 01.59 |
+| Train Precision | 61.02 | 67.87 | 11.23 | 69.07 | 13.19 | 01.21 |
+| Test Precision | 61.23 | 66.20 | 08.12 | 67.23 | 09.80 | 01.00 |
+| Train Recall | 65.02 | 71.05 | 09.27 | 71.44 | 09.87 | 01.07 |
+| Test Recall | 65.34 | 69.48 | 06.34 | 70.18 | 07.41 | 00.91 |
+| Train F1 | 59.17 | 68.88 | 16.41 | 69.82 | 18.00 | 01.43 |
+| Test F1 | 58.91 | 67.08 | 13.87 | 68.13 | 15.65 | 01.27 |
 ## FakeNewsNet-gossipcop_max-vocab=10000_pre=v1_domain_T=150_s=10.svg
 ![FakeNewsNet-gossipcop_max-vocab=10000_pre=v1_domain_T=150_s=10.svg](imgs/FakeNewsNet-gossipcop_max-vocab=10000_pre=v1_domain_T=150_s=10.svg)
 | Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
@@ -575,6 +635,90 @@
 | Test Recall | 58.41 | 68.86 | 17.89 | 71.83 | 22.98 | 02.31 |
 | Train F1 | 48.50 | 62.15 | 28.14 | 66.41 | 36.93 | 03.64 |
 | Test F1 | 47.59 | 60.58 | 27.30 | 65.01 | 36.60 | 03.50 |
+## FakeNewsNet-gossipcop_text.svg
+![FakeNewsNet-gossipcop_text.svg](imgs/FakeNewsNet-gossipcop_text.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 77.93 | 72.75 | -6.65 | 77.93 | 00.00 | 02.16 |
+| Test Accuracy | 77.82 | 71.00 | -8.76 | 77.82 | 00.00 | 02.34 |
+| Train Precision | 69.56 | 68.79 | -1.11 | 69.56 | 00.00 | 00.94 |
+| Test Precision | 69.57 | 67.46 | -3.03 | 69.57 | 00.00 | 00.95 |
+| Train Recall | 68.65 | 74.95 | 09.18 | 75.40 | 09.83 | 01.30 |
+| Test Recall | 69.11 | 73.32 | 06.09 | 74.36 | 07.60 | 01.22 |
+| Train F1 | 69.07 | 69.02 | -0.07 | 70.23 | 01.68 | 01.72 |
+| Test F1 | 69.33 | 67.33 | -2.88 | 69.33 | 00.00 | 01.83 |
+## FakeNewsNet-gossipcop_text_domain.svg
+![FakeNewsNet-gossipcop_text_domain.svg](imgs/FakeNewsNet-gossipcop_text_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 68.09 | 77.45 | 13.75 | 81.31 | 19.42 | 04.81 |
+| Test Accuracy | 67.48 | 76.49 | 13.35 | 80.92 | 19.92 | 04.96 |
+| Train Precision | 65.40 | 71.73 | 09.68 | 74.40 | 13.76 | 02.38 |
+| Test Precision | 64.94 | 71.03 | 09.38 | 73.92 | 13.83 | 02.45 |
+| Train Recall | 70.83 | 77.23 | 09.04 | 77.61 | 09.57 | 02.22 |
+| Test Recall | 70.20 | 76.65 | 09.19 | 77.56 | 10.48 | 02.42 |
+| Train F1 | 64.57 | 73.02 | 13.09 | 74.77 | 15.80 | 03.89 |
+| Test F1 | 63.99 | 72.17 | 12.78 | 74.48 | 16.39 | 04.04 |
+## FakeNewsNet-gossipcop_text_domain_tweet.svg
+![FakeNewsNet-gossipcop_text_domain_tweet.svg](imgs/FakeNewsNet-gossipcop_text_domain_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 70.63 | 78.61 | 11.30 | 79.49 | 12.54 | 03.25 |
+| Test Accuracy | 68.50 | 77.53 | 13.18 | 78.77 | 14.99 | 03.32 |
+| Train Precision | 66.13 | 72.55 | 09.71 | 73.03 | 10.43 | 01.52 |
+| Test Precision | 64.59 | 71.68 | 10.98 | 72.39 | 12.08 | 01.53 |
+| Train Recall | 71.23 | 77.63 | 08.98 | 77.90 | 09.36 | 01.78 |
+| Test Recall | 69.40 | 76.91 | 10.82 | 77.06 | 11.04 | 01.85 |
+| Train F1 | 66.30 | 73.97 | 11.57 | 74.49 | 12.35 | 02.80 |
+| Test F1 | 64.32 | 72.98 | 13.46 | 73.78 | 14.71 | 02.87 |
+## FakeNewsNet-gossipcop_text_tweet.svg
+![FakeNewsNet-gossipcop_text_tweet.svg](imgs/FakeNewsNet-gossipcop_text_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 67.97 | 75.30 | 10.78 | 80.01 | 17.71 | 01.69 |
+| Test Accuracy | 67.05 | 74.01 | 10.38 | 79.86 | 19.11 | 01.99 |
+| Train Precision | 63.67 | 69.53 | 09.20 | 72.52 | 13.90 | 01.17 |
+| Test Precision | 63.05 | 68.22 | 08.20 | 72.35 | 14.75 | 01.33 |
+| Train Recall | 68.08 | 74.61 | 09.59 | 74.97 | 10.12 | 01.37 |
+| Test Recall | 67.32 | 72.99 | 08.42 | 73.67 | 09.43 | 01.05 |
+| Train F1 | 63.46 | 70.57 | 11.20 | 72.25 | 13.85 | 01.13 |
+| Test F1 | 62.64 | 69.12 | 10.34 | 71.57 | 14.26 | 01.28 |
+## FakeNewsNet-gossipcop_tweet.svg
+![FakeNewsNet-gossipcop_tweet.svg](imgs/FakeNewsNet-gossipcop_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 24.03 | 24.03 | 00.00 | 24.03 | 00.00 | 00.01 |
+| Test Accuracy | 24.10 | 24.10 | 00.00 | 24.10 | 00.00 | 00.03 |
+| Train Precision | 12.01 | 12.01 | 00.00 | 12.01 | 00.00 | 00.00 |
+| Test Precision | 12.05 | 12.05 | 00.00 | 12.05 | 00.00 | 00.01 |
+| Train Recall | 50.00 | 50.00 | 00.00 | 50.00 | 00.00 | 00.03 |
+| Test Recall | 50.00 | 50.00 | 00.00 | 50.00 | 00.00 | 00.06 |
+| Train F1 | 19.37 | 19.37 | 00.00 | 19.37 | 00.00 | 00.01 |
+| Test F1 | 19.42 | 19.42 | 00.00 | 19.42 | 00.00 | 00.02 |
+## FakeNewsNet-politifact_domain.svg
+![FakeNewsNet-politifact_domain.svg](imgs/FakeNewsNet-politifact_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 56.52 | 83.29 | 47.36 | 84.00 | 48.62 | 04.49 |
+| Test Accuracy | 47.64 | 76.89 | 61.40 | 76.89 | 61.40 | 04.62 |
+| Train Precision | 72.66 | 83.07 | 14.33 | 83.84 | 15.39 | 02.84 |
+| Test Precision | 68.59 | 76.13 | 10.99 | 84.90 | 23.78 | 02.82 |
+| Train Recall | 62.36 | 82.44 | 32.20 | 83.13 | 33.31 | 04.48 |
+| Test Recall | 58.31 | 77.97 | 33.72 | 77.97 | 33.72 | 04.87 |
+| Train F1 | 53.32 | 82.70 | 55.10 | 83.42 | 56.45 | 05.31 |
+| Test F1 | 44.15 | 76.24 | 72.68 | 76.24 | 72.68 | 06.01 |
+## FakeNewsNet-politifact_domain_tweet.svg
+![FakeNewsNet-politifact_domain_tweet.svg](imgs/FakeNewsNet-politifact_domain_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 58.06 | 77.73 | 33.88 | 78.44 | 35.10 | 04.32 |
+| Test Accuracy | 63.21 | 68.87 | 08.95 | 75.00 | 18.65 | 02.39 |
+| Train Precision | 29.03 | 80.06 | 175.78 | 80.46 | 177.16 | 09.65 |
+| Test Precision | 31.60 | 75.75 | 139.72 | 84.01 | 165.85 | 08.60 |
+| Train Recall | 50.00 | 79.91 | 59.82 | 80.36 | 60.72 | 06.67 |
+| Test Recall | 50.00 | 74.84 | 49.68 | 76.47 | 52.94 | 05.61 |
+| Train F1 | 36.73 | 77.72 | 111.60 | 78.20 | 112.90 | 08.99 |
+| Test F1 | 38.73 | 68.84 | 77.74 | 74.45 | 92.23 | 06.76 |
 ## FakeNewsNet-politifact_max-vocab=15000_pre=v1_domain_T=150_s=10.svg
 ![FakeNewsNet-politifact_max-vocab=15000_pre=v1_domain_T=150_s=10.svg](imgs/FakeNewsNet-politifact_max-vocab=15000_pre=v1_domain_T=150_s=10.svg)
 | Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
@@ -1439,3 +1583,279 @@
 | Test Recall | 68.91 | 76.96 | 11.68 | 85.11 | 23.51 | 02.91 |
 | Train F1 | 66.72 | 78.63 | 17.85 | 84.30 | 26.35 | 03.01 |
 | Test F1 | 65.04 | 73.43 | 12.90 | 84.16 | 29.40 | 03.95 |
+## FakeNewsNet-politifact_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![FakeNewsNet-politifact_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/FakeNewsNet-politifact_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 65.88 | 80.92 | 22.83 | 87.68 | 33.09 | 04.89 |
+| Test Accuracy | 64.15 | 72.17 | 12.50 | 80.66 | 25.74 | 03.99 |
+| Train Precision | 77.75 | 82.53 | 06.15 | 87.60 | 12.67 | 02.63 |
+| Test Precision | 61.42 | 74.53 | 21.34 | 79.40 | 29.27 | 02.33 |
+| Train Recall | 59.56 | 82.83 | 39.07 | 87.11 | 46.26 | 05.59 |
+| Test Recall | 52.62 | 75.84 | 44.13 | 80.53 | 53.04 | 05.29 |
+| Train F1 | 55.20 | 80.92 | 46.59 | 87.29 | 58.13 | 06.15 |
+| Test F1 | 46.40 | 72.06 | 55.30 | 79.26 | 70.82 | 05.77 |
+## FakeNewsNet-politifact_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg
+![FakeNewsNet-politifact_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg](imgs/FakeNewsNet-politifact_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 72.87 | 84.36 | 15.77 | 85.55 | 17.40 | 04.34 |
+| Test Accuracy | 67.45 | 75.94 | 12.59 | 78.30 | 16.09 | 03.42 |
+| Train Precision | 81.44 | 84.32 | 03.54 | 85.09 | 04.48 | 02.22 |
+| Test Precision | 68.38 | 75.18 | 09.94 | 77.19 | 12.88 | 01.62 |
+| Train Recall | 67.97 | 85.24 | 25.41 | 86.01 | 26.54 | 04.41 |
+| Test Recall | 57.64 | 76.95 | 33.50 | 78.77 | 36.66 | 03.78 |
+| Train F1 | 67.27 | 84.25 | 25.24 | 85.23 | 26.70 | 05.01 |
+| Test F1 | 55.16 | 75.27 | 36.46 | 76.45 | 38.60 | 04.41 |
+## FakeNewsNet-politifact_text.svg
+![FakeNewsNet-politifact_text.svg](imgs/FakeNewsNet-politifact_text.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 55.69 | 71.21 | 27.87 | 83.18 | 49.36 | 03.78 |
+| Test Accuracy | 48.58 | 59.43 | 22.33 | 75.00 | 54.38 | 04.93 |
+| Train Precision | 66.32 | 75.28 | 13.51 | 83.03 | 25.20 | 02.55 |
+| Test Precision | 58.60 | 64.77 | 10.53 | 74.29 | 26.77 | 03.27 |
+| Train Recall | 60.78 | 74.03 | 21.80 | 83.90 | 38.04 | 03.41 |
+| Test Recall | 56.38 | 64.43 | 14.28 | 76.10 | 34.98 | 03.98 |
+| Train F1 | 53.48 | 71.12 | 32.98 | 83.04 | 55.27 | 03.97 |
+| Test F1 | 47.46 | 59.42 | 25.20 | 74.30 | 56.55 | 04.84 |
+## FakeNewsNet-politifact_text_domain.svg
+![FakeNewsNet-politifact_text_domain.svg](imgs/FakeNewsNet-politifact_text_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 43.72 | 84.72 | 93.78 | 86.73 | 98.38 | 07.02 |
+| Test Accuracy | 37.74 | 73.11 | 93.72 | 76.42 | 102.49 | 06.79 |
+| Train Precision | 71.35 | 84.50 | 18.43 | 86.32 | 20.98 | 03.60 |
+| Test Precision | 68.57 | 71.98 | 04.97 | 75.40 | 09.96 | 02.56 |
+| Train Recall | 51.53 | 85.39 | 65.71 | 87.27 | 69.36 | 05.81 |
+| Test Recall | 50.75 | 73.37 | 44.57 | 77.06 | 51.84 | 04.36 |
+| Train F1 | 32.89 | 84.57 | 157.13 | 86.53 | 163.09 | 07.87 |
+| Test F1 | 28.55 | 72.17 | 152.78 | 75.63 | 164.90 | 07.35 |
+## FakeNewsNet-politifact_text_domain_tweet.svg
+![FakeNewsNet-politifact_text_domain_tweet.svg](imgs/FakeNewsNet-politifact_text_domain_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 66.47 | 83.06 | 24.96 | 86.73 | 30.48 | 03.64 |
+| Test Accuracy | 67.45 | 75.00 | 11.19 | 78.77 | 16.78 | 03.56 |
+| Train Precision | 75.59 | 83.24 | 10.12 | 86.31 | 14.18 | 02.51 |
+| Test Precision | 69.22 | 74.23 | 07.24 | 77.57 | 12.06 | 02.40 |
+| Train Recall | 60.50 | 84.11 | 39.02 | 87.00 | 43.80 | 04.39 |
+| Test Recall | 57.38 | 75.94 | 32.35 | 79.19 | 38.01 | 04.04 |
+| Train F1 | 57.07 | 82.97 | 45.38 | 86.53 | 51.62 | 04.48 |
+| Test F1 | 54.54 | 74.30 | 36.23 | 77.95 | 42.92 | 04.31 |
+## FakeNewsNet-politifact_text_tweet.svg
+![FakeNewsNet-politifact_text_tweet.svg](imgs/FakeNewsNet-politifact_text_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 51.18 | 78.55 | 53.48 | 81.87 | 59.96 | 06.62 |
+| Test Accuracy | 40.57 | 70.75 | 74.39 | 77.36 | 90.68 | 08.06 |
+| Train Precision | 65.12 | 80.04 | 22.91 | 81.93 | 25.81 | 03.70 |
+| Test Precision | 50.62 | 71.01 | 40.28 | 76.35 | 50.83 | 04.68 |
+| Train Recall | 57.25 | 80.35 | 40.35 | 82.78 | 44.59 | 05.50 |
+| Test Recall | 50.31 | 72.58 | 44.27 | 78.07 | 55.18 | 05.84 |
+| Train F1 | 46.89 | 78.55 | 67.52 | 81.76 | 74.37 | 07.14 |
+| Test F1 | 37.07 | 70.31 | 89.67 | 76.61 | 106.66 | 08.29 |
+## FakeNewsNet-politifact_tweet.svg
+![FakeNewsNet-politifact_tweet.svg](imgs/FakeNewsNet-politifact_tweet.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 58.06 | 44.91 | -22.65 | 58.06 | 00.00 | 01.36 |
+| Test Accuracy | 63.21 | 38.68 | -38.81 | 63.21 | 00.00 | 02.48 |
+| Train Precision | 54.04 | 71.61 | 32.51 | 71.61 | 32.51 | 02.02 |
+| Test Precision | 31.60 | 68.75 | 117.56 | 68.75 | 117.56 | 03.70 |
+| Train Recall | 50.04 | 52.55 | 05.02 | 52.55 | 05.02 | 00.27 |
+| Test Recall | 50.00 | 51.49 | 02.98 | 51.49 | 02.98 | 00.32 |
+| Train F1 | 36.99 | 35.03 | -5.30 | 36.99 | 00.00 | 00.41 |
+| Test F1 | 38.73 | 30.17 | -22.10 | 38.73 | 00.00 | 01.07 |
+## FakeNewsNet_domain.svg
+![FakeNewsNet_domain.svg](imgs/FakeNewsNet_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 62.20 | 74.71 | 20.11 | 74.71 | 20.11 | 01.83 |
+| Test Accuracy | 61.23 | 73.49 | 20.02 | 73.49 | 20.02 | 01.72 |
+| Train Precision | 61.18 | 68.30 | 11.64 | 68.30 | 11.64 | 01.20 |
+| Test Precision | 60.91 | 67.25 | 10.41 | 67.28 | 10.46 | 00.99 |
+| Train Recall | 64.96 | 71.72 | 10.41 | 71.88 | 10.65 | 01.13 |
+| Test Recall | 64.65 | 70.87 | 09.62 | 71.43 | 10.49 | 00.97 |
+| Train F1 | 59.17 | 69.28 | 17.09 | 69.28 | 17.09 | 01.54 |
+| Test F1 | 58.44 | 68.14 | 16.60 | 68.16 | 16.63 | 01.38 |
+## FakeNewsNet_text.svg
+![FakeNewsNet_text.svg](imgs/FakeNewsNet_text.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 49.99 | 67.97 | 35.97 | 71.51 | 43.05 | 03.11 |
+| Test Accuracy | 49.12 | 66.90 | 36.20 | 71.55 | 45.66 | 03.10 |
+| Train Precision | 59.28 | 66.63 | 12.40 | 67.43 | 13.75 | 01.36 |
+| Test Precision | 58.41 | 65.71 | 12.50 | 67.47 | 15.51 | 01.39 |
+| Train Recall | 61.08 | 72.21 | 18.22 | 73.05 | 19.60 | 01.86 |
+| Test Recall | 60.05 | 71.05 | 18.32 | 72.94 | 21.47 | 01.88 |
+| Train F1 | 49.61 | 65.26 | 31.55 | 67.67 | 36.40 | 02.61 |
+| Test F1 | 48.73 | 64.15 | 31.64 | 67.70 | 38.93 | 02.61 |
+## FakeNewsNet_text_domain.svg
+![FakeNewsNet_text_domain.svg](imgs/FakeNewsNet_text_domain.svg)
+| Metric | Epoch 1 | Epoch 100 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 40.45 | 73.23 | 81.04 | 74.32 | 83.73 | 08.91 |
+| Test Accuracy | 40.26 | 72.33 | 79.66 | 73.75 | 83.18 | 08.98 |
+| Train Precision | 58.31 | 69.33 | 18.90 | 69.85 | 19.79 | 02.72 |
+| Test Precision | 57.90 | 68.64 | 18.55 | 69.58 | 20.17 | 02.73 |
+| Train Recall | 57.22 | 75.06 | 31.18 | 75.52 | 31.98 | 04.58 |
+| Test Recall | 56.92 | 74.34 | 30.60 | 75.45 | 32.55 | 04.64 |
+| Train F1 | 40.33 | 69.70 | 72.82 | 70.53 | 74.88 | 07.88 |
+| Test F1 | 40.15 | 68.81 | 71.38 | 70.04 | 74.45 | 07.96 |
+## HateXPlain_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![HateXPlain_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/HateXPlain_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 40.31 | 40.81 | 01.24 | 44.72 | 10.94 | 01.17 |
+| Test Accuracy | 40.69 | 41.04 | 00.86 | 44.44 | 09.22 | 01.20 |
+| Train Precision | 16.56 | 47.43 | 186.41 | 48.90 | 195.29 | 03.36 |
+| Test Precision | 09.30 | 31.98 | 243.87 | 34.15 | 267.20 | 03.42 |
+| Train Recall | 08.87 | 53.67 | 505.07 | 60.22 | 578.92 | 08.30 |
+| Test Recall | 06.12 | 48.23 | 688.07 | 53.04 | 766.67 | 07.81 |
+| Train F1 | 08.44 | 43.66 | 417.30 | 47.93 | 467.89 | 05.44 |
+| Test F1 | 03.87 | 35.93 | 828.42 | 38.55 | 896.12 | 05.05 |
+## HateXPlain_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg
+![HateXPlain_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg](imgs/HateXPlain_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 36.93 | 41.45 | 12.24 | 42.84 | 16.00 | 00.94 |
+| Test Accuracy | 37.39 | 41.61 | 11.29 | 42.43 | 13.48 | 00.96 |
+| Train Precision | 39.19 | 54.72 | 39.63 | 55.51 | 41.64 | 03.14 |
+| Test Precision | 16.81 | 32.14 | 91.20 | 34.10 | 102.86 | 02.21 |
+| Train Recall | 29.03 | 62.55 | 115.47 | 63.80 | 119.77 | 04.40 |
+| Test Recall | 23.20 | 52.86 | 127.84 | 54.26 | 133.88 | 04.43 |
+| Train F1 | 27.21 | 49.14 | 80.60 | 49.68 | 82.58 | 02.69 |
+| Test F1 | 19.06 | 36.72 | 92.65 | 37.06 | 94.44 | 02.53 |
+## fake-news-datasets-deception-Celebrity_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![fake-news-datasets-deception-Celebrity_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/fake-news-datasets-deception-Celebrity_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 48.75 | 100.00 | 105.13 | 100.00 | 105.13 | 08.88 |
+| Test Accuracy | 54.00 | 73.00 | 35.19 | 76.00 | 40.74 | 03.91 |
+| Train Precision | 44.43 | 100.00 | 125.07 | 100.00 | 125.07 | 07.76 |
+| Test Precision | 52.04 | 73.25 | 40.76 | 77.84 | 49.58 | 04.02 |
+| Train Recall | 49.72 | 100.00 | 101.13 | 100.00 | 101.13 | 08.75 |
+| Test Recall | 50.16 | 72.26 | 44.06 | 76.17 | 51.85 | 04.39 |
+| Train F1 | 33.61 | 100.00 | 197.53 | 100.00 | 197.53 | 10.48 |
+| Test F1 | 36.95 | 72.38 | 95.89 | 75.96 | 105.58 | 06.19 |
+## fake-news-datasets-deception-Celebrity_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg
+![fake-news-datasets-deception-Celebrity_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg](imgs/fake-news-datasets-deception-Celebrity_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 49.00 | 100.00 | 104.08 | 100.00 | 104.08 | 06.87 |
+| Test Accuracy | 54.00 | 70.00 | 29.63 | 75.00 | 38.89 | 02.83 |
+| Train Precision | 24.50 | 100.00 | 308.16 | 100.00 | 308.16 | 07.28 |
+| Test Precision | 27.00 | 69.81 | 158.56 | 74.93 | 177.52 | 05.42 |
+| Train Recall | 50.00 | 100.00 | 100.00 | 100.00 | 100.00 | 06.78 |
+| Test Recall | 50.00 | 69.65 | 39.30 | 75.08 | 50.16 | 03.10 |
+| Train F1 | 32.89 | 100.00 | 204.04 | 100.00 | 204.04 | 08.42 |
+| Test F1 | 35.06 | 69.70 | 98.80 | 74.94 | 113.75 | 04.64 |
+## fake-news-datasets-deception-Celebrity_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![fake-news-datasets-deception-Celebrity_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/fake-news-datasets-deception-Celebrity_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 49.00 | 100.00 | 104.08 | 100.00 | 104.08 | 06.09 |
+| Test Accuracy | 54.00 | 72.00 | 33.33 | 77.00 | 42.59 | 03.52 |
+| Train Precision | 49.50 | 100.00 | 102.02 | 100.00 | 102.02 | 04.92 |
+| Test Precision | 27.00 | 71.82 | 166.00 | 77.45 | 186.85 | 04.71 |
+| Train Recall | 49.99 | 100.00 | 100.04 | 100.00 | 100.04 | 06.00 |
+| Test Recall | 50.00 | 71.82 | 43.64 | 76.29 | 52.58 | 03.57 |
+| Train F1 | 33.31 | 100.00 | 200.21 | 100.00 | 200.21 | 07.55 |
+| Test F1 | 35.06 | 71.82 | 104.85 | 76.47 | 118.11 | 05.04 |
+## fake-news-datasets-deception-Election-Day_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![fake-news-datasets-deception-Election-Day_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/fake-news-datasets-deception-Election-Day_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 89.73 | 93.78 | 04.51 | 94.72 | 05.56 | 01.39 |
+| Test Accuracy | 89.85 | 87.59 | -2.52 | 92.11 | 02.52 | 01.72 |
+| Train Precision | 44.86 | 82.02 | 82.84 | 94.99 | 111.75 | 11.43 |
+| Test Precision | 44.92 | 66.82 | 48.75 | 95.09 | 111.69 | 10.45 |
+| Train Recall | 50.00 | 87.60 | 75.20 | 89.56 | 79.12 | 12.11 |
+| Test Recall | 50.00 | 68.46 | 36.92 | 70.28 | 40.56 | 05.43 |
+| Train F1 | 47.29 | 84.50 | 78.68 | 85.88 | 81.60 | 11.49 |
+| Test F1 | 47.33 | 67.58 | 42.78 | 69.66 | 47.18 | 05.94 |
+## fake-news-datasets-deception-Election-Day_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg
+![fake-news-datasets-deception-Election-Day_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg](imgs/fake-news-datasets-deception-Election-Day_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 89.73 | 92.74 | 03.35 | 93.50 | 04.20 | 01.11 |
+| Test Accuracy | 89.85 | 85.34 | -5.02 | 91.35 | 01.67 | 03.30 |
+| Train Precision | 44.86 | 79.36 | 76.91 | 94.91 | 111.57 | 07.55 |
+| Test Precision | 44.92 | 63.41 | 41.16 | 85.59 | 90.54 | 07.48 |
+| Train Recall | 50.00 | 88.24 | 76.48 | 90.05 | 80.10 | 10.10 |
+| Test Recall | 50.00 | 67.20 | 34.40 | 69.83 | 39.66 | 04.58 |
+| Train F1 | 47.29 | 82.96 | 75.43 | 83.50 | 76.57 | 08.03 |
+| Test F1 | 47.33 | 64.89 | 37.10 | 67.10 | 41.77 | 03.57 |
+## fake-news-datasets-deception-Election-Day_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![fake-news-datasets-deception-Election-Day_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/fake-news-datasets-deception-Election-Day_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 89.73 | 87.84 | -2.11 | 94.44 | 05.25 | 02.55 |
+| Test Accuracy | 89.85 | 77.82 | -13.39 | 90.98 | 01.26 | 03.87 |
+| Train Precision | 44.86 | 72.43 | 61.46 | 95.38 | 112.62 | 04.75 |
+| Test Precision | 44.92 | 59.78 | 33.08 | 79.25 | 76.42 | 03.58 |
+| Train Recall | 50.00 | 90.79 | 81.58 | 93.75 | 87.50 | 05.71 |
+| Test Recall | 50.00 | 69.59 | 39.18 | 74.13 | 48.26 | 03.30 |
+| Train F1 | 47.29 | 77.14 | 63.12 | 86.94 | 83.84 | 04.30 |
+| Test F1 | 47.33 | 60.89 | 28.65 | 65.82 | 39.07 | 02.45 |
+## fake-news-datasets-deception-FakeNewsAMT_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![fake-news-datasets-deception-FakeNewsAMT_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/fake-news-datasets-deception-FakeNewsAMT_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 49.74 | 96.35 | 93.71 | 98.96 | 98.95 | 09.30 |
+| Test Accuracy | 51.04 | 50.00 | -2.04 | 58.33 | 14.28 | 02.87 |
+| Train Precision | 24.87 | 96.59 | 288.38 | 98.97 | 297.95 | 08.27 |
+| Test Precision | 25.52 | 49.70 | 94.75 | 75.79 | 196.98 | 05.72 |
+| Train Recall | 50.00 | 96.37 | 92.74 | 98.96 | 97.92 | 09.26 |
+| Test Recall | 50.00 | 49.72 | -0.56 | 57.58 | 15.16 | 02.73 |
+| Train F1 | 33.22 | 96.35 | 190.04 | 98.96 | 197.89 | 11.13 |
+| Test F1 | 33.79 | 48.91 | 44.75 | 51.95 | 53.74 | 03.16 |
+## fake-news-datasets-deception-FakeNewsAMT_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg
+![fake-news-datasets-deception-FakeNewsAMT_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg](imgs/fake-news-datasets-deception-FakeNewsAMT_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 49.74 | 92.19 | 85.34 | 93.23 | 87.43 | 06.53 |
+| Test Accuracy | 51.04 | 47.92 | -6.11 | 56.25 | 10.21 | 02.89 |
+| Train Precision | 24.87 | 92.95 | 273.74 | 93.89 | 277.52 | 07.08 |
+| Test Precision | 25.52 | 47.45 | 85.93 | 68.33 | 167.75 | 04.48 |
+| Train Recall | 50.00 | 92.22 | 84.44 | 93.26 | 86.52 | 06.50 |
+| Test Recall | 50.00 | 47.63 | -4.74 | 55.67 | 11.34 | 02.80 |
+| Train F1 | 33.22 | 92.16 | 177.42 | 93.22 | 180.61 | 08.07 |
+| Test F1 | 33.79 | 46.78 | 38.44 | 53.00 | 56.85 | 02.87 |
+## fake-news-datasets-deception-FakeNewsAMT_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![fake-news-datasets-deception-FakeNewsAMT_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/fake-news-datasets-deception-FakeNewsAMT_p=0.25_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 50.00 | 100.00 | 100.00 | 100.00 | 100.00 | 07.34 |
+| Test Accuracy | 51.04 | 46.88 | -8.15 | 52.08 | 02.04 | 02.44 |
+| Train Precision | 74.93 | 100.00 | 33.46 | 100.00 | 33.46 | 04.82 |
+| Test Precision | 25.52 | 46.39 | 81.78 | 52.55 | 105.92 | 04.33 |
+| Train Recall | 50.26 | 100.00 | 98.97 | 100.00 | 98.97 | 07.35 |
+| Test Recall | 50.00 | 46.61 | -6.78 | 52.37 | 04.74 | 02.41 |
+| Train F1 | 33.79 | 100.00 | 195.95 | 100.00 | 195.95 | 08.98 |
+| Test F1 | 33.79 | 45.88 | 35.78 | 51.32 | 51.88 | 03.37 |
+## hate-speech-dataset_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg
+![hate-speech-dataset_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg](imgs/hate-speech-dataset_num-clauses=10000_max-vocab=15000_pre=v2_text_T=200_s=15.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 88.02 | 71.75 | -18.48 | 89.13 | 01.26 | 04.94 |
+| Test Accuracy | 89.04 | 71.68 | -19.50 | 89.17 | 00.15 | 05.08 |
+| Train Precision | 63.74 | 61.24 | -3.92 | 71.88 | 12.77 | 02.10 |
+| Test Precision | 65.95 | 59.74 | -9.42 | 67.04 | 01.65 | 01.71 |
+| Train Recall | 54.82 | 76.00 | 38.64 | 77.47 | 41.32 | 04.65 |
+| Test Recall | 56.31 | 73.59 | 30.69 | 74.96 | 33.12 | 04.06 |
+| Train F1 | 55.95 | 60.32 | 07.81 | 68.14 | 21.79 | 01.84 |
+| Test F1 | 58.09 | 58.70 | 01.05 | 65.35 | 12.50 | 01.81 |
+## hate-speech-dataset_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg
+![hate-speech-dataset_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg](imgs/hate-speech-dataset_num-clauses=5000_max-vocab=15000_pre=v2_text_T=150_s=10.svg)
+| Metric | Epoch 1 | Epoch 150 | &#8710;% last | Max | &#8710;% max | Std Dev |
+| - | - | - | - | - | - | - |
+| Train Accuracy | 64.28 | 61.30 | -4.64 | 75.01 | 16.69 | 02.41 |
+| Test Accuracy | 62.04 | 61.17 | -1.40 | 75.10 | 21.05 | 02.44 |
+| Train Precision | 55.89 | 59.63 | 06.69 | 60.57 | 08.37 | 00.81 |
+| Test Precision | 54.49 | 58.33 | 07.05 | 59.25 | 08.74 | 00.74 |
+| Train Recall | 64.18 | 74.36 | 15.86 | 75.98 | 18.39 | 02.14 |
+| Test Recall | 61.73 | 72.46 | 17.38 | 74.17 | 20.15 | 01.99 |
+| Train F1 | 52.33 | 53.44 | 02.12 | 59.21 | 13.15 | 01.60 |
+| Test F1 | 49.76 | 52.18 | 04.86 | 58.60 | 17.77 | 01.61 |

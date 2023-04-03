@@ -1,4 +1,7 @@
 .idea/
 docs/
 FakeNewsNet/
+HateXplain/
+fake-news-datasets/
+hate-speech-dataset/
 FakeCovid_July2020.csv

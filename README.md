@@ -22,6 +22,10 @@ You also need to download the datasets (from project root):
 ```bash
 git clone https://github.com/KaiDMML/FakeNewsNet.git
 wget https://github.com/Gautamshahi/FakeCovid/raw/master/data/FakeCovid_July2020.csv
+git clone https://github.com/hate-alert/HateXplain.git
+git clone https://github.com/pmacinec/fake-news-datasets.git
+# https://www.kaggle.com/datasets/mrmorj/hate-speech-and-offensive-language-dataset
+git clone https://github.com/Vicomtech/hate-speech-dataset.git
 ```
 
 
@@ -118,3 +122,49 @@ pycuda.driver.CompileError: nvcc preprocessing of /tmp/tmp0jmwjg0w.cu failed
 [stderr:
 b"In file included from /usr/local/cuda-11.2/bin/../targets/x86_64-linux/include/cuda_runtime.h:83,\n                 from <command-line>:\n/usr/local/cuda-11.2/bin/../targets/x86_64-linux/include/crt/host_config.h:139:2: error: #error -- unsupported GNU version! gcc versions later than 10 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.\n  139 | #error -- unsupported GNU version! gcc versions later than 10 are not supported! The nvcc flag '-allow-unsupported-compiler' can be used to override this version check; however, using an unsupported host compiler may cause compilation failure or incorrect run time execution. Use at your own risk.\n      |  ^~~~~\n"]
 ```
+
+## Datasets
+### Implemented
+- FakeNewsNet
+- FakeNewsNet-politifact
+- FakeNewsNet-gossipcop
+- FakeCovid
+- HateXPlain
+- HateXPlain-binary
+- fake-news-datasets-deception-FakeNewsAMT
+- fake-news-datasets-deception-Celebrity
+- fake-news-datasets-Election-Day
+- fake-news-datasets-deception-FakeNewsChallenge
+- fake-news-datasets-deception-FakeNewsChallenge-body
+- fake-news-datasets-deception-FakeNewsCorpus
+- fake-news-datasets-deception-FakeNewsCorpus-body
+- hate-speech-dataset
+
+### To be implemented
+- fake-news-datasets: Fake News detection - Kaggle
+- fake-news-datasets: Fake News - Kaggle
+- fake-news-datasets: Fake News vs Satire
+- fake-news-datasets: Fakeddit
+- fake-news-datasets: FEVER
+- fake-news-datasets: GeorgeMcIntire/fake_real_news_dataset
+- fake-news-datasets: Getting real about Fake News - Kaggle
+- fake-news-datasets: HoaxDataset
+- fake-news-datasets: LIAR
+- fake-news-datasets: Misinfofinder
+- fake-news-datasets: OpenSources
+- fake-news-datasets: PHEME
+- fake-news-datasets: This Just In
+
+### Excluded (non-latin)
+- fake-news-datasets: BanFakeNews
+- fake-news-datasets: Detecting Rumors Microblogs
+- fake-news-datasets: EANN-KDD18
+- fake-news-datasets: Hack the Fake News
+- fake-news-datasets: Monant API
+- fake-news-datasets: News Credibility
+- fake-news-datasets: WeFEND-AAAI20
+- fake-news-datasets: WSDM - Fake News Classification - Kaggle
+
+### Excluded (other)
+- fake-news-datasets: BuzzFeedNews Facebook Facts (no text)
+- fake-news-datasets: CREDBANK (account suspended from AWS)

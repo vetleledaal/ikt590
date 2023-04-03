@@ -1,0 +1,347 @@
+[*] Load dataset...
+[*] Fix malformed data...
+[*] Split...
+[*] Encoding...
+[*] -> text...
+[*] Encoding complete!
+==============================
+Using GPU for training
+Dataset: FakeCovid
+TMU params: num-clauses=5000, T=100, s=10.0
+Epochs: 100
+Feature(s): text
+max-vocab=15000, max-domain=500, max-tweet=500
+====================
+Train size: 5844
+Train classes: 10
+Test size: 1462
+Test classes: 10
+Total features: 11552
+==============================
+[*] Training for 100 epochs...
+Epoch   1: Train%/Test% | Accuracy: 20.16%/18.81%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 35.80%/10.02% | Recall: 14.06%/11.12% | F1: 8.88%/6.16% | Time: fit=044s, train=030s, test=008s, total=082s
+Epoch   2: Train%/Test% | Accuracy: 19.80%/17.99%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 40.47%/9.60% | Recall: 13.09%/10.80% | F1: 9.39%/5.72% | Time: fit=027s, train=029s, test=007s, total=062s
+Epoch   3: Train%/Test% | Accuracy: 28.52%/28.59%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 40.35%/20.12% | Recall: 14.02%/12.92% | F1: 11.34%/10.19% | Time: fit=026s, train=027s, test=007s, total=060s
+Epoch   4: Train%/Test% | Accuracy: 36.43%/36.73%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 40.36%/20.29% | Recall: 14.40%/13.69% | F1: 13.41%/11.83% | Time: fit=025s, train=026s, test=007s, total=058s
+Epoch   5: Train%/Test% | Accuracy: 38.43%/38.85%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 24.12%/10.13% | Recall: 13.24%/12.18% | F1: 12.24%/10.37% | Time: fit=025s, train=026s, test=006s, total=057s
+Epoch   6: Train%/Test% | Accuracy: 38.77%/39.26%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 14.33%/10.29% | Recall: 13.51%/12.17% | F1: 12.24%/10.51% | Time: fit=024s, train=026s, test=006s, total=056s
+Epoch   7: Train%/Test% | Accuracy: 44.68%/46.31%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 13.90%/11.65% | Recall: 12.32%/11.33% | F1: 12.34%/11.00% | Time: fit=024s, train=025s, test=006s, total=056s
+Epoch   8: Train%/Test% | Accuracy: 45.57%/46.51%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 13.92%/12.44% | Recall: 12.93%/12.14% | F1: 13.04%/11.96% | Time: fit=024s, train=025s, test=006s, total=055s
+Epoch   9: Train%/Test% | Accuracy: 45.31%/45.69%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 14.51%/12.11% | Recall: 12.81%/12.07% | F1: 13.10%/11.88% | Time: fit=024s, train=025s, test=006s, total=055s
+Epoch  10: Train%/Test% | Accuracy: 47.36%/47.61%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 17.30%/14.11% | Recall: 16.93%/14.77% | F1: 16.26%/14.00% | Time: fit=024s, train=024s, test=006s, total=055s
+Epoch  11: Train%/Test% | Accuracy: 48.13%/48.29%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 16.81%/13.53% | Recall: 15.72%/13.76% | F1: 15.83%/13.49% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  12: Train%/Test% | Accuracy: 48.96%/48.70%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 20.35%/14.39% | Recall: 17.13%/15.17% | F1: 17.79%/14.59% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  13: Train%/Test% | Accuracy: 49.32%/49.18%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 20.50%/16.49% | Recall: 16.47%/15.39% | F1: 17.53%/15.53% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  14: Train%/Test% | Accuracy: 50.36%/50.14%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 20.42%/15.86% | Recall: 17.37%/15.16% | F1: 18.27%/15.27% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  15: Train%/Test% | Accuracy: 49.35%/47.47%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 19.91%/14.08% | Recall: 17.00%/14.32% | F1: 17.75%/14.06% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  16: Train%/Test% | Accuracy: 48.82%/46.99%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 20.36%/15.22% | Recall: 17.29%/14.98% | F1: 18.05%/14.85% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  17: Train%/Test% | Accuracy: 48.96%/46.51%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 30.29%/15.49% | Recall: 17.16%/14.91% | F1: 18.15%/14.90% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  18: Train%/Test% | Accuracy: 50.09%/47.20%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 23.83%/14.51% | Recall: 16.11%/14.17% | F1: 17.37%/14.15% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  19: Train%/Test% | Accuracy: 51.01%/49.11%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 22.10%/16.91% | Recall: 17.34%/16.96% | F1: 18.35%/16.68% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  20: Train%/Test% | Accuracy: 50.09%/48.97%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 25.00%/19.52% | Recall: 20.57%/18.03% | F1: 21.09%/17.62% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  21: Train%/Test% | Accuracy: 49.57%/47.13%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 25.53%/15.95% | Recall: 21.47%/18.04% | F1: 21.81%/16.06% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  22: Train%/Test% | Accuracy: 48.07%/45.62%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 26.23%/20.32% | Recall: 23.35%/21.35% | F1: 22.57%/18.53% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  23: Train%/Test% | Accuracy: 47.52%/45.08%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 34.35%/25.48% | Recall: 21.04%/18.93% | F1: 20.58%/17.14% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  24: Train%/Test% | Accuracy: 46.83%/44.53%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 42.94%/34.68% | Recall: 20.04%/18.38% | F1: 19.72%/17.16% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  25: Train%/Test% | Accuracy: 46.25%/43.57%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 37.51%/37.62% | Recall: 23.56%/20.40% | F1: 22.13%/19.57% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  26: Train%/Test% | Accuracy: 47.71%/44.53%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 36.10%/36.76% | Recall: 22.81%/18.71% | F1: 21.79%/20.29% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  27: Train%/Test% | Accuracy: 48.02%/44.46%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 31.96%/30.89% | Recall: 26.11%/21.04% | F1: 24.80%/21.05% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  28: Train%/Test% | Accuracy: 48.44%/44.94%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 29.52%/26.94% | Recall: 27.67%/24.03% | F1: 24.56%/22.75% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  29: Train%/Test% | Accuracy: 47.07%/43.43%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 31.98%/23.91% | Recall: 32.20%/23.43% | F1: 27.33%/20.55% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  30: Train%/Test% | Accuracy: 44.93%/42.95%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 25.04%/23.23% | Recall: 30.02%/25.34% | F1: 22.53%/20.14% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  31: Train%/Test% | Accuracy: 43.79%/41.79%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 25.61%/24.79% | Recall: 30.99%/26.55% | F1: 23.27%/20.77% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  32: Train%/Test% | Accuracy: 42.01%/40.08%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 19.83%/17.39% | Recall: 33.43%/26.64% | F1: 21.27%/18.19% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  33: Train%/Test% | Accuracy: 43.39%/42.41% | Precision: 29.33%/26.92% | Recall: 30.46%/25.36% | F1: 23.65%/20.38% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  34: Train%/Test% | Accuracy: 42.01%/40.15%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 23.14%/20.84% | Recall: 27.94%/24.05% | F1: 20.25%/18.68% | Time: fit=023s, train=025s, test=006s, total=054s
+Epoch  35: Train%/Test% | Accuracy: 42.16%/41.72%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 23.98%/22.00% | Recall: 28.04%/24.31% | F1: 21.36%/19.37% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  36: Train%/Test% | Accuracy: 42.47%/40.83%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 25.42%/21.51% | Recall: 28.51%/23.32% | F1: 21.65%/18.72% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  37: Train%/Test% | Accuracy: 42.85%/41.52%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 22.32%/22.74% | Recall: 29.22%/24.87% | F1: 21.43%/19.79% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  38: Train%/Test% | Accuracy: 42.73%/41.31%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 26.52%/22.09% | Recall: 25.79%/22.62% | F1: 20.58%/18.84% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  39: Train%/Test% | Accuracy: 44.32%/42.89%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 30.56%/19.10% | Recall: 26.83%/23.11% | F1: 21.65%/18.59% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  40: Train%/Test% | Accuracy: 45.11%/43.23%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 30.01%/17.43% | Recall: 25.08%/22.01% | F1: 20.17%/17.26% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  41: Train%/Test% | Accuracy: 47.19%/44.19%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 24.48%/18.18% | Recall: 26.29%/19.87% | F1: 22.70%/17.93% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  42: Train%/Test% | Accuracy: 46.32%/43.98%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 37.52%/28.91% | Recall: 26.81%/21.79% | F1: 23.86%/20.75% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  43: Train%/Test% | Accuracy: 46.01%/42.82%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 21.70%/18.21% | Recall: 27.37%/23.11% | F1: 21.50%/18.70% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  44: Train%/Test% | Accuracy: 44.95%/42.89%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 22.19%/18.75% | Recall: 31.02%/23.06% | F1: 23.25%/18.82% | Time: fit=024s, train=024s, test=006s, total=054s
+Epoch  45: Train%/Test% | Accuracy: 46.29%/43.50%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 21.74%/19.04% | Recall: 27.52%/23.91% | F1: 21.71%/19.23% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  46: Train%/Test% | Accuracy: 46.59%/42.95%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 23.36%/18.79% | Recall: 28.84%/23.78% | F1: 22.85%/18.89% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  47: Train%/Test% | Accuracy: 49.02%/44.73%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 34.11%/19.52% | Recall: 28.05%/23.36% | F1: 25.34%/20.45% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  48: Train%/Test% | Accuracy: 48.79%/44.53% | Precision: 29.85%/19.23% | Recall: 28.93%/23.99% | F1: 26.31%/20.17% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  49: Train%/Test% | Accuracy: 47.14%/43.71%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 23.51%/18.32% | Recall: 28.52%/24.11% | F1: 23.16%/18.69% | Time: fit=022s, train=024s, test=006s, total=052s
+Epoch  50: Train%/Test% | Accuracy: 45.67%/42.41%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 23.46%/20.01% | Recall: 35.14%/27.60% | F1: 24.89%/20.62% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  51: Train%/Test% | Accuracy: 45.77%/42.48%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 32.92%/18.98% | Recall: 34.72%/26.39% | F1: 24.90%/19.96% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  52: Train%/Test% | Accuracy: 46.78%/43.09% | Precision: 27.77%/28.80% | Recall: 33.15%/26.70% | F1: 25.85%/21.97% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  53: Train%/Test% | Accuracy: 44.85%/41.18% | Precision: 23.44%/19.79% | Recall: 35.81%/26.42% | F1: 25.53%/20.61% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  54: Train%/Test% | Accuracy: 44.51%/41.31% | Precision: 22.85%/19.77% | Recall: 35.82%/26.68% | F1: 25.22%/20.70% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  55: Train%/Test% | Accuracy: 43.87%/41.45% | Precision: 24.98%/23.33% | Recall: 40.77%/31.24% | F1: 26.60%/23.29% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  56: Train%/Test% | Accuracy: 43.10%/40.22% | Precision: 25.90%/23.15% | Recall: 40.62%/30.23% | F1: 26.45%/22.05% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  57: Train%/Test% | Accuracy: 42.20%/40.01% | Precision: 26.20%/20.86% | Recall: 40.46%/33.44% | F1: 26.51%/22.17% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  58: Train%/Test% | Accuracy: 42.08%/39.67% | Precision: 23.40%/20.18% | Recall: 39.33%/27.14% | F1: 25.24%/20.12% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  59: Train%/Test% | Accuracy: 41.85%/39.88% | Precision: 22.24%/20.61% | Recall: 38.53%/30.06% | F1: 24.27%/21.14% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  60: Train%/Test% | Accuracy: 42.18%/39.88% | Precision: 22.72%/19.84% | Recall: 39.70%/30.99% | F1: 24.75%/20.90% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  61: Train%/Test% | Accuracy: 42.80%/40.97% | Precision: 22.57%/20.62% | Recall: 38.19%/30.65% | F1: 24.93%/21.58% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  62: Train%/Test% | Accuracy: 47.35%/44.53%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 25.88%/20.20% | Recall: 38.89%/29.39% | F1: 27.28%/21.52% | Time: fit=022s, train=024s, test=006s, total=052s
+Epoch  63: Train%/Test% | Accuracy: 46.80%/44.39%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 27.55%/22.00% | Recall: 39.78%/29.19% | F1: 29.14%/22.29% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  64: Train%/Test% | Accuracy: 47.72%/46.03%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 30.44%/26.22% | Recall: 35.58%/27.97% | F1: 29.56%/23.32% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  65: Train%/Test% | Accuracy: 47.71%/45.42%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 35.39%/19.30% | Recall: 27.44%/22.12% | F1: 24.28%/18.36% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  66: Train%/Test% | Accuracy: 48.72%/46.58%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 34.99%/17.78% | Recall: 28.34%/22.39% | F1: 24.86%/18.51% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  67: Train%/Test% | Accuracy: 48.67%/46.10%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 30.70%/21.29% | Recall: 28.84%/23.83% | F1: 25.59%/20.29% | Time: fit=023s, train=024s, test=006s, total=054s
+Epoch  68: Train%/Test% | Accuracy: 48.12%/45.62%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 28.09%/21.35% | Recall: 30.92%/24.93% | F1: 26.33%/20.74% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  69: Train%/Test% | Accuracy: 48.60%/45.96%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 35.39%/23.00% | Recall: 28.50%/23.11% | F1: 25.50%/19.87% | Time: fit=023s, train=025s, test=006s, total=054s
+Epoch  70: Train%/Test% | Accuracy: 47.96%/44.73%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 36.41%/19.24% | Recall: 32.87%/23.55% | F1: 26.07%/19.13% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  71: Train%/Test% | Accuracy: 48.72%/46.58% | Precision: 39.22%/31.88% | Recall: 36.60%/27.18% | F1: 29.61%/22.75% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  72: Train%/Test% | Accuracy: 48.49%/45.55% | Precision: 34.92%/25.20% | Recall: 34.54%/24.61% | F1: 28.10%/20.55% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  73: Train%/Test% | Accuracy: 48.13%/44.73%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 35.25%/19.58% | Recall: 31.23%/23.01% | F1: 26.32%/18.44% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  74: Train%/Test% | Accuracy: 48.10%/45.01% | Precision: 39.78%/18.56% | Recall: 32.57%/22.96% | F1: 27.01%/18.55% | Time: fit=023s, train=025s, test=006s, total=054s
+Epoch  75: Train%/Test% | Accuracy: 48.58%/46.58% | Precision: 39.05%/20.03% | Recall: 32.42%/25.06% | F1: 26.36%/20.14% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  76: Train%/Test% | Accuracy: 48.19%/45.49%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 35.41%/20.65% | Recall: 33.50%/25.61% | F1: 26.68%/19.64% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  77: Train%/Test% | Accuracy: 47.96%/44.80%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 40.39%/17.59% | Recall: 34.66%/25.34% | F1: 27.07%/19.02% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  78: Train%/Test% | Accuracy: 47.64%/44.66%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 32.68%/17.59% | Recall: 31.71%/21.92% | F1: 27.31%/17.43% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  79: Train%/Test% | Accuracy: 47.30%/44.46%/usr/local/lib/python3.8/dist-packages/sklearn/metrics/_classification.py:1245: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+ | Precision: 45.95%/21.00% | Recall: 35.46%/26.94% | F1: 26.74%/19.83% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  80: Train%/Test% | Accuracy: 43.34%/40.36% | Precision: 29.96%/21.10% | Recall: 39.54%/29.73% | F1: 26.02%/20.86% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  81: Train%/Test% | Accuracy: 44.61%/41.38% | Precision: 31.00%/19.97% | Recall: 39.53%/27.73% | F1: 26.73%/19.81% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  82: Train%/Test% | Accuracy: 46.17%/43.43% | Precision: 37.19%/31.30% | Recall: 30.95%/24.69% | F1: 22.88%/20.73% | Time: fit=022s, train=025s, test=006s, total=053s
+Epoch  83: Train%/Test% | Accuracy: 46.01%/43.43% | Precision: 36.73%/33.31% | Recall: 28.10%/23.11% | F1: 22.73%/20.20% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  84: Train%/Test% | Accuracy: 45.09%/42.68% | Precision: 28.07%/27.91% | Recall: 33.19%/26.73% | F1: 27.13%/22.32% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  85: Train%/Test% | Accuracy: 45.28%/42.27% | Precision: 28.19%/25.51% | Recall: 34.23%/27.01% | F1: 26.54%/21.94% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  86: Train%/Test% | Accuracy: 44.76%/41.52% | Precision: 24.49%/25.59% | Recall: 37.81%/29.28% | F1: 26.17%/22.76% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  87: Train%/Test% | Accuracy: 45.62%/43.02% | Precision: 28.96%/26.73% | Recall: 42.97%/34.02% | F1: 30.29%/25.47% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  88: Train%/Test% | Accuracy: 45.02%/42.34% | Precision: 27.93%/25.98% | Recall: 43.29%/33.71% | F1: 29.40%/25.15% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  89: Train%/Test% | Accuracy: 44.13%/41.86% | Precision: 28.83%/27.17% | Recall: 44.10%/36.60% | F1: 28.70%/26.03% | Time: fit=022s, train=024s, test=006s, total=052s
+Epoch  90: Train%/Test% | Accuracy: 45.76%/43.78% | Precision: 25.92%/24.28% | Recall: 41.71%/30.93% | F1: 28.35%/23.64% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  91: Train%/Test% | Accuracy: 46.17%/43.50% | Precision: 25.64%/24.04% | Recall: 41.54%/30.01% | F1: 28.02%/22.81% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  92: Train%/Test% | Accuracy: 46.51%/43.64% | Precision: 24.94%/23.36% | Recall: 40.23%/34.38% | F1: 27.18%/24.68% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  93: Train%/Test% | Accuracy: 46.85%/43.78% | Precision: 27.03%/23.86% | Recall: 42.85%/30.68% | F1: 29.30%/23.62% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  94: Train%/Test% | Accuracy: 45.11%/41.24% | Precision: 28.63%/24.75% | Recall: 45.30%/31.87% | F1: 31.07%/23.77% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  95: Train%/Test% | Accuracy: 43.94%/40.70% | Precision: 27.36%/23.03% | Recall: 43.42%/30.26% | F1: 28.61%/21.67% | Time: fit=022s, train=024s, test=006s, total=053s
+Epoch  96: Train%/Test% | Accuracy: 43.16%/40.15% | Precision: 26.58%/23.44% | Recall: 43.31%/32.46% | F1: 27.77%/22.90% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  97: Train%/Test% | Accuracy: 44.52%/40.97% | Precision: 25.10%/24.09% | Recall: 46.79%/35.49% | F1: 28.27%/24.83% | Time: fit=023s, train=025s, test=006s, total=053s
+Epoch  98: Train%/Test% | Accuracy: 44.49%/41.18% | Precision: 25.71%/22.90% | Recall: 47.92%/34.68% | F1: 29.19%/24.00% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch  99: Train%/Test% | Accuracy: 44.51%/41.79% | Precision: 23.76%/19.79% | Recall: 37.52%/26.20% | F1: 25.76%/19.81% | Time: fit=023s, train=024s, test=006s, total=053s
+Epoch 100: Train%/Test% | Accuracy: 45.89%/42.95% | Precision: 25.09%/21.14% | Recall: 38.34%/29.94% | F1: 27.48%/22.24% | Time: fit=022s, train=024s, test=006s, total=053s

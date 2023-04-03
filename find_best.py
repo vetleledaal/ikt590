@@ -4,10 +4,13 @@ import os
 import subprocess
 import tempfile
 import multiprocessing
+import nltk
+
+nltk.download('omw')
 
 
-def run(log_dir, dataset, T, s, feature_set, max_vocab, preprocessor):
-    fname = f"{dataset}_max-vocab={max_vocab}_pre={preprocessor}_{'_'.join(feature_set)}_T={T}_s={s}"
+def run(log_dir, dataset, T, s, feature_set, max_vocab, preprocessor, num_clauses):
+    fname = f"{dataset}_num-clauses={num_clauses}_max-vocab={max_vocab}_pre={preprocessor}_{'_'.join(feature_set)}_T={T}_s={s}"
     fnamelog = f'{fname}.log'
     fnametmp = f'{fname}.tmp.'
     log_file = os.path.join(log_dir, fnamelog)
@@ -76,9 +79,53 @@ def main(args):
         p.close()
         p.join()
 
+# for simpler comparison
+def main2(args):
+    log_dir = "logs"
+    os.makedirs(log_dir, exist_ok=True)
+
+    batch_size = 2
+
+    with multiprocessing.Pool(batch_size) as p:
+        dataset = 'HateXPlain'
+        T = '150'
+        s = '10'
+        max_vocab = '15000'
+        preprocessor = 'v2'
+        num_clauses = '5000'
+        feature_set = ['text']
+
+        p.apply_async(run, kwds={
+            'log_dir': log_dir,
+            'dataset': dataset,
+            'T': T,
+            's': s,
+            'max_vocab': max_vocab,
+            'preprocessor': preprocessor,
+            'feature_set': feature_set,
+            'num_clauses': num_clauses,
+        })
+
+        T = '200'
+        s = '15'
+        num_clauses = '10000'
+        p.apply_async(run, kwds={
+            'log_dir': log_dir,
+            'dataset': dataset,
+            'T': T,
+            's': s,
+            'max_vocab': max_vocab,
+            'preprocessor': preprocessor,
+            'feature_set': feature_set,
+            'num_clauses': num_clauses,
+        })
+
+        p.close()
+        p.join()
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--monitor', action='store_true')
     args = parser.parse_args()
-    main(args)
+    main2(args)

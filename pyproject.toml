@@ -18,6 +18,7 @@ tmu = {git = "https://github.com/cair/tmu.git", rev = "main"}
 pycuda = "^2022.2.2"
 plotly = "^5.13.1"
 nbformat = "^5.7.3"
+openpyxl = "^3.1.2"
 
 [tool.poetry.group.dev.dependencies]
 faker = "^17.5.0"

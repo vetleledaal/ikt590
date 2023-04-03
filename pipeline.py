@@ -1,3 +1,4 @@
+import json
 import argparse
 import glob
 import logging
@@ -183,6 +184,12 @@ def load_FakeNewsNet(subset='*'):
 
     return pd.concat(dfs, ignore_index=True)
 
+def load_FakeNewsNet_politifact():
+    return load_FakeNewsNet('politifact')
+
+def load_FakeNewsNet_gossipcop():
+    return load_FakeNewsNet('gossipcop')
+
 def load_FakeCovid():
     df = pd.read_csv('FakeCovid_July2020.csv')
     df = df.rename(columns={'source_title': 'text', 'article_source': 'url', 'class': 'label'})
@@ -193,6 +200,110 @@ def load_FakeCovid():
     labels = Counter(df['label']).most_common(10)
     df = df[df['label'].isin([label[0] for label in labels])]
     return df
+
+def load_HateXPlain(binary=False):
+    with open('HateXplain/Data/dataset.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    all_posts = []
+    for post_data in data.values():
+        text = ' '.join(post_data['post_tokens'])
+        labels = [annotator['target'] for annotator in post_data['annotators'] if 'None' not in annotator['target']]
+
+        if not any(labels):
+            label = 'None'
+        else:
+            label_counts = Counter([label for sublist in labels for label in sublist])
+
+            if len(label_counts) > 1:
+                label = 'Multi'
+            else:
+                label, _ = label_counts.most_common(1)[0]
+
+        if binary:
+            label = bool(label != 'None')
+
+        all_posts.append((text, label))
+    return pd.DataFrame(all_posts, columns=['text', 'label'])
+
+def load_HateXPlain_binary():
+    return load_HateXPlain(binary=True)
+
+def load_fake_news_datasets():
+    # Don't actually use this
+    dfs = []
+    for name, obj in globals().items():
+        if name.startswith('load_fake_news_datasets_') and callable(obj):
+            dfs.append(obj())
+    return pd.concat(dfs)
+
+def load_fake_news_datasets_deception_FakeNewsAMT():
+    all_posts = []
+
+    for label in ('fake', 'legit'):
+        path = f'fake-news-datasets/datasets/deception_detection_fake_news/data/fakeNewsDataset/{label}/'
+        for filename in os.listdir(path):
+            with open(path + filename, 'r') as file:
+                text = file.read()
+                label_value = bool(label == 'fake')
+                all_posts.append((text, label_value))
+
+    return pd.DataFrame(all_posts, columns=['text', 'label'])
+
+def load_fake_news_datasets_deception_Celebrity():
+    all_posts = []
+
+    for label in ('fake', 'legit'):
+        path = f'fake-news-datasets/datasets/deception_detection_fake_news/data/celebrityDataset/{label}/'
+        for filename in os.listdir(path):
+            with open(path + filename, 'r') as file:
+                text = file.read()
+                label_value = bool(label == 'fake')
+                all_posts.append((text, label_value))
+
+    return pd.DataFrame(all_posts, columns=['text', 'label'])
+
+def load_fake_news_datasets_deception_Election_Day():
+    df = pd.read_excel('fake-news-datasets/datasets/electionday_tweets/data/electionday_tweets.xlsx')
+    df = df.rename(columns={'is_fake_news': 'label'})
+    return df
+
+def load_fake_news_datasets_deception_FakeNewsChallenge():
+    df = pd.read_csv('fake-news-datasets/datasets/fake_news_challenge/data/train_stances.csv')
+    df = df.rename(columns={'Headline': 'text', 'Stance': 'label'})
+    return df
+
+def load_fake_news_datasets_deception_FakeNewsChallenge_body():
+    df_bodies = pd.read_csv('fake-news-datasets/datasets/fake_news_challenge/data/train_bodies.csv')
+    df_stances = pd.read_csv('fake-news-datasets/datasets/fake_news_challenge/data/train_stances.csv')
+    df = pd.merge(df_stances, df_bodies, on='Body ID')
+    df = df.rename(columns={'articleBody': 'text', 'Stance': 'label'})
+    return df
+
+def load_fake_news_datasets_deception_FakeNewsCorpus():
+    df = pd.read_csv('fake-news-datasets/datasets/fake_news_corpus/data/data.csv')
+    df = df.rename(columns={'headline': 'text', 'type': 'label'})
+    return df
+
+def load_fake_news_datasets_deception_FakeNewsCorpus_body():
+    df = pd.read_csv('fake-news-datasets/datasets/fake_news_corpus/data/data.csv')
+    df = df.rename(columns={'content': 'text', 'type': 'label'})
+    return df
+
+
+def load_hate_speech_dataset():
+    metadata_df = pd.read_csv('hate-speech-dataset/annotations_metadata.csv')
+
+    all_posts = []
+    for _, row in metadata_df.iterrows():
+        file_id = row['file_id']
+        label = bool(row['label'] == 'hate')
+
+        with open(f'hate-speech-dataset/all_files/{file_id}.txt', 'r', encoding='utf-8') as f:
+            text = f.read()
+
+        all_posts.append((text, label))
+    return  pd.DataFrame(all_posts, columns=['text', 'label'])
 
 def encode_df(train_df: pd.DataFrame, test_df: pd.DataFrame,
     clean_func, features: List[str], max_vocab: int,
@@ -251,16 +362,30 @@ def fix_malformed(df: pd.DataFrame) -> pd.DataFrame:
             df = df.dropna(subset=cols_to_drop, how='any')
     return df
 
+dataset_map = {
+    'FakeNewsNet': load_FakeNewsNet,
+    'FakeNewsNet-politifact': load_FakeNewsNet_politifact,
+    'FakeNewsNet-gossipcop': load_FakeNewsNet_gossipcop,
+    'FakeCovid': load_FakeCovid,
+    'HateXPlain': load_HateXPlain,
+    'HateXPlain-binary': load_HateXPlain_binary,
+    'fake-news-datasets': load_fake_news_datasets,
+    'fake-news-datasets-deception-FakeNewsAMT': load_fake_news_datasets_deception_FakeNewsAMT,
+    'fake-news-datasets-deception-Celebrity': load_fake_news_datasets_deception_Celebrity,
+    'fake-news-datasets-deception-Election-Day': load_fake_news_datasets_deception_Election_Day,
+    'fake-news-datasets-deception-FakeNewsChallenge': load_fake_news_datasets_deception_FakeNewsChallenge,
+    'fake-news-datasets-deception-FakeNewsChallenge-body': load_fake_news_datasets_deception_FakeNewsChallenge_body,
+    'fake-news-datasets-deception-FakeNewsCorpus': load_fake_news_datasets_deception_FakeNewsCorpus,
+    'fake-news-datasets-deception-FakeNewsCorpus-body': load_fake_news_datasets_deception_FakeNewsCorpus_body,
+    'hate-speech-dataset': load_hate_speech_dataset,
+}
 
 def main(args):
     np.random.seed(args.seed)
 
     print('[*] Load dataset...')
-    if args.dataset.startswith('FakeNewsNet'):
-        subset = args.dataset.split('-')[-1] if '-' in args.dataset else '*'
-        df = load_FakeNewsNet(subset=subset)
-    elif args.dataset == 'FakeCovid':
-        df = load_FakeCovid()
+    df = dataset_map[args.dataset]()
+    assert isinstance(df, pd.DataFrame)
 
     print('[*] Fix malformed data...')
     df = fix_malformed(df)
@@ -294,7 +419,9 @@ def main(args):
     print(f'Test classes: {len(set(train_test_set.test_y))}')
     print(f'Total features: {train_test_set.train_x.shape[1]}')
     print('='*30)
-    train(train_test_set, metrics=('acc', 'prec', 'rec', 'f1'))
+
+    if not args.dry:
+        train(train_test_set, metrics=('acc', 'prec', 'rec', 'f1'))
 
 
 if __name__ == '__main__':
@@ -305,7 +432,7 @@ if __name__ == '__main__':
     parser.add_argument('-e',  '--epochs', default=100, type=int) # 100 150
     parser.add_argument('-d',  '--device', default='GPU', type=str)
     parser.add_argument('-sd', '--seed', default=42, type=int)
-    parser.add_argument('-ds', '--dataset', choices=('FakeNewsNet', 'FakeCovid', 'FakeNewsNet-gossipcop', 'FakeNewsNet-politifact'), required=True)
+    parser.add_argument('-ds', '--dataset', choices=dataset_map.keys(), default='HateXPlain')
     parser.add_argument('-f',  '--feature', choices=('all', 'text', 'domain', 'tweet'), default=('all',), nargs='+')
     parser.add_argument('-ts', '--test-size', default=0.2, type=float)
     parser.add_argument('-m',  '--malformed', choices=('fix', 'drop'), default='fix')
@@ -313,5 +440,6 @@ if __name__ == '__main__':
     parser.add_argument('-md', '--max-domain', default=500, type=int)
     parser.add_argument('-mt', '--max-tweet', default=500, type=int)
     parser.add_argument('-p',  '--preprocessor', choices=('v1', 'v2'), default='v1')
+    parser.add_argument('-dr', '--dry', action='store_true')
     args = parser.parse_args()
     main(args)
